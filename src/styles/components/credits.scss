@@ -11,6 +11,7 @@
     font-size: rem(16px);
     padding: 0 rem(6px);
     position: relative;
+    user-select: none;
     &:first-child {
         &:after {
             content: "";

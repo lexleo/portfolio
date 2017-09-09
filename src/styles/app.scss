@@ -17,10 +17,14 @@ $phones: 480px;
 // Normalize
 @import 'layout/normalize.min';
 
+// Layout
 @import 'layout/mixins';
 @import 'layout/media';
 @import 'layout/layout';
 @import 'layout/fonts';
+
+// Commons
+@import 'common/titles';
 
 // Components
 @import 'components/menu';

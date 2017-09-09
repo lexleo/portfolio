@@ -21,6 +21,7 @@
   top: 3%;
   right: 5%;
   transition: .3s;
+  user-select: none;
   cursor: pointer;
   &:hover {
     color: $green;

@@ -1,0 +1,5 @@
+.section__title {
+    color: $white;
+    @include bernier();
+    font-size: rem(40px);
+}
