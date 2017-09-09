@@ -22,32 +22,32 @@ const webpackConfig = require('./webpack.config.js');
 
 // paths
 const paths = {
-    root: './build',
+    root: './docs',
     templates: {
         pages: 'src/templates/pages/*.pug',
         src: 'src/templates/**/*.pug',
-        dest: 'build/assets/'
+        dest: 'docs/assets/'
     },
     styles: {
         src: 'src/styles/**/*.scss',
-        dest: 'build/assets/styles/',
+        dest: 'docs/assets/styles/',
         css: './src/styles/app.scss'
     },
     images: {
         src: ['src/images/**/*.*', '!src/images/**/*.svg'],
-        dest: 'build/assets/images/',
+        dest: 'docs/assets/images/',
         icons: {
             src: 'src/images/icons/',
-            dest: 'build/assets/images/icons/'
+            dest: 'docs/assets/images/icons/'
         }
     },
     scripts: {
         src: 'src/scripts/**/*.*',
-        dest: 'build/assets/scripts/'
+        dest: 'docs/assets/scripts/'
     },
     fonts: {
         src: 'src/fonts/**/*.*',
-        dest: 'build/assets/fonts/'
+        dest: 'docs/assets/fonts/'
     }
 }
 
@@ -71,7 +71,7 @@ function styles() {
 }
 
 
-// clean build
+// clean docs
 function clean() {
     return del(paths.root);
 }
@@ -95,7 +95,7 @@ function watch() {
 }
 
 
-// reload browser on changes in build folder
+// reload browser on changes in docs folder
 function server() {
     browserSync.init({
         server: paths.root
@@ -104,13 +104,13 @@ function server() {
 }
 
 
-// move images to build
+// move images to docs
 function images() {
     return gulp.src(paths.images.src)
         .pipe(gulp.dest(paths.images.dest));
 }
 
-// move fonts to build
+// move fonts to docs
 function fonts() {
     return gulp.src(paths.fonts.src)
         .pipe(gulp.dest(paths.fonts.dest));
@@ -132,7 +132,7 @@ gulp.task('default', gulp.series(
     gulp.parallel(watch, server)
 ));
 
-gulp.task('build', gulp.series(
+gulp.task('docs', gulp.series(
     clean,
     gulp.parallel(styles, templates, images, fonts, scripts)
 ));
@@ -157,7 +157,7 @@ gulp.task('sprite', function () {
 		}))
 		// cheerio plugin create unnecessary string '&gt;', so replace it.
 		.pipe(replace('&gt;', '>'))
-		// build svg sprite
+		// docs svg sprite
 		.pipe(svgSprite({
 			mode: {
 				symbol: {
