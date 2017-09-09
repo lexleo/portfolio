@@ -1,0 +1,96 @@
+.menu {
+    background-color: rgba($white, .7);
+    width: rem(380px);
+    // height: rem(398px);
+    @include flex(column);
+    border-radius: 7px;
+}
+
+.menu__img {
+    margin-top: rem(40px);
+    background: url('../images/photos/me.png');
+    width: rem(147px);
+    height: rem(147px);
+    border-radius: 50%;
+}
+
+.menu__title {
+    color: $grey;
+    @include roboto(medium);
+    font-size: rem(28px);
+    margin-top: rem(20px);
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.menu__subtitle {
+    color: $lightGrey;
+    @include roboto(regular);
+    font-size: rem(16px);
+    margin-top: rem(5px);
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.socials__list {
+    @include flex();
+    margin: rem(35px) rem(15px);
+}
+
+.socials__item {
+    display: inline-flex;
+    margin: rem(12px);
+    opacity: .65;
+    transition: .3s;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.socials__link {
+}
+
+.socials__svg {
+    width: rem(30px);
+    height: rem(22px);
+    fill: $green;
+}
+
+.buttons__list {
+    height: rem(43px);
+    width: 100%;
+    border-bottom-left-radius: 7px;
+    @include flex();
+    justify-content: space-between;
+}
+
+.buttons__item {
+    background-color: $green;
+    height: 100%;
+    width: 100%;
+    @include flex();
+    margin: 0;
+    padding: 0;
+    opacity: .65;
+    white-space: nowrap;
+    transition: .3s;
+    &:last-child {
+        border-bottom-right-radius: 7px;
+        border-left: 2px solid rgba($white, .5);        
+    }
+    &:first-child {
+        border-bottom-left-radius: 7px;
+        border-right: 2px solid rgba($white, .5);
+    }
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.buttons__link {
+    text-decoration: none;
+    color: $white;
+    @include roboto(medium);
+    font-size: 16;
+    padding: 0 rem(20px);
+}

@@ -1,0 +1,29 @@
+.welcome-container {
+  margin: 0 auto;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  @include flex(column);
+  background: url('../images/bg/mountains.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.login-button {
+  width: rem(180px);
+  height: rem(45px);
+  color: $white;
+  @include roboto(medium);
+  font-size: rem(16px);
+  border-radius: 5px;
+  border: 1px solid $white;
+  @include flex();
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  transition: .3s;
+  cursor: pointer;
+  &:hover {
+    color: $green;
+    background-color: $white;
+  }
+}

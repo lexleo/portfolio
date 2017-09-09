@@ -1,0 +1,143 @@
+//Bernier
+
+@font-face {
+	font-family: 'Bernier';
+	src: url('../fonts/BERNIERDistressed-Regular.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bernier';
+	src: url('../fonts/BERNIERRegular-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bernier';
+	src: url('../fonts/BERNIERShade-Regular.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+//Roboto
+
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Light.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-LightItalic.woff') format('woff');
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-MediumItalic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+@mixin bernier($font: regular) {
+	font-family: 'Bernier', Helvetica, sans-serif;
+
+	@if $font == regular {
+		font-weight: normal;
+	}
+
+	@if $font == distressed {
+		font-weight: 500;
+	}
+
+	@if $font == shade {
+		font-weight: bold;
+	}
+}
+
+
+
+@mixin roboto($font: regular, $style: normal) {
+	font-family: 'Roboto', Helvetica, sans-serif;
+
+	@if $font == regular {
+		font-weight: normal;
+		@if $style == normal {
+			font-style: normal;
+		}
+	}
+	
+	@if $font == bold {
+		font-weight: bold;
+		@if $style == normal {
+			font-style: normal;
+		}
+		@if $style == italic {
+			font-style: italic;
+		}
+	}
+
+	@if $font == medium {
+		font-weight: 500;
+		@if $style == normal {
+			font-style: normal;
+		}
+		@if $style == italic {
+			font-style: italic;
+		}
+	}
+
+	@if $font == light {
+		font-weight: 200;
+		@if $style == normal {
+			font-style: normal;
+		}
+		@if $style == italic {
+			font-style: italic;
+		}
+	}	
+}

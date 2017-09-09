@@ -1,0 +1,32 @@
+// Colors
+$green: #00bfa5;
+$darkGreen: #009688;
+$grey: #455a64;
+$lightGrey:#67787f;
+$black: #373e42;
+$white: #ffffff;
+
+
+// Resolutions
+$desktop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
+
+// Normalize
+@import 'layout/normalize.min';
+
+@import 'layout/mixins';
+@import 'layout/media';
+@import 'layout/layout';
+@import 'layout/fonts';
+
+// Components
+@import 'components/menu';
+@import 'components/credits';
+
+
+// Pages
+
+@import 'pages/welcome'

@@ -1,0 +1,14 @@
+//- mixin svg-external(svg_file, svg_id, svg_class, svg_title)
+//-   span.icon
+//-     svg(class=svg_class,aria-hidden='true', title=svg_title)
+//-       use(xlink:href= svg_file + '#' + svg_id)
+
+//- - var svg = './assets/images/icons/sprite.svg'
+
+//- mixin svg-sprite(className, name)
+//-   svg(class="#{className}" role="img")
+//-     use(id="#{name}" xlink:href="#{svg}##{name}")
+
+//- mixin svg-use(className, name)
+//-   svg(class="#{className}" role="img")
+//-     use(id="#{name}" xlink:href="./assets/images/icons/#{name}.svg")
