@@ -1,0 +1,97 @@
+.auth__title {
+    @include bernier();
+    font-size: rem(35px);
+    color: $grey;
+    margin-top: rem(40px);
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        background: #c4cbcd;
+        height: 6px;
+        width: 24px;
+        position: absolute;
+        left: -40px;
+        bottom: 45%;
+    }
+    &:after {
+        content: "";
+        display: block;
+        background: #c4cbcd;
+        height: 6px;
+        width: 24px;
+        position: absolute;
+        right: -40px;
+        bottom: 45%;
+    }    
+}
+
+.auth__row {
+    @include flex();
+    margin-bottom: rem(18px);
+}
+
+.auth__left-block {
+    background-color: #f0efe9;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    @include flex();
+    height: rem(44px);
+    width: rem(44px);
+}
+
+.auth__svg-login {
+    width: rem(13px);
+    fill: $light-light-grey;
+}
+
+.auth__svg-password {
+    width: rem(16px);
+    fill: $light-light-grey;
+}
+
+.auth__input {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    background: $white;
+    outline: none;
+    color: $grey;
+    height: rem(44px);
+    width: rem(298px);
+    @include roboto();
+    font-size: rem(16px);
+    padding-left: rem(20px);
+    @include placeholder {
+        color: $light-light-grey;
+    }
+}
+
+@include placeholder {
+    color: $light-light-grey;
+}
+
+
+.auth__captcha {
+    @include flex(column);
+}
+
+.auth__check {
+    @include flex();
+}
+
+
+.auth__question {
+    @include roboto(bold);
+    color: $light-grey;
+    margin-top: rem(5px);
+}  
+
+.auth__radios {
+    @include flex();
+}
+
+.auth__radio {
+    margin-left: rem(20px);
+}

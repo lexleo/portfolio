@@ -1,0 +1,37 @@
+.menu
+    .menu__wrapper
+        h2.auth__title Авторизуйтесь
+        form.auth__form
+            .auth__row
+                .auth__left-block
+                    +icon('auth__svg-login', 'login')
+                input(type="text" placeholder="Логин").auth__input
+            .auth__row
+                .auth__left-block
+                    +icon('auth__svg-password', 'password')
+                input(type="text" placeholder="Пароль").auth__input
+            .auth__captcha
+                .auth__check
+                    label(for="man" class="control2 control2-checkbox auth__checkbox-label") Я человек
+                        input(type="checkbox" id="man")
+                        .control2_indicator
+
+                .auth__confirmation
+                    .auth__question Вы точно не робот?
+                    .auth__radios
+                        label(class="control control-radio auth__radio") Да
+                            input(type="radio" name="radio" checked="checked")
+                            .control_indicator
+
+                        label(class="control control-radio auth__radio") Нет
+                            input(type="radio" name="radio")
+                            .control_indicator
+
+
+    ul.buttons__list
+        li.buttons__item
+            a.buttons__link(href="index.html") На главную
+        li.buttons__item
+            a.buttons__link(href="about.html") Войти
+
+

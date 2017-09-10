@@ -1,3 +1,4 @@
+// Display: Flex
 @mixin flex($direction: row) {
   display: flex;
   justify-content: center;
@@ -10,4 +11,17 @@
   @if $direction == column {
     flex-direction: column;
   }
+}
+
+// Placeholder
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+
+  :focus::-webkit-input-placeholder {color: transparent}
+  :focus::-moz-placeholder          {color: transparent}
+  :focus:-moz-placeholder           {color: transparent}
+  :focus:-ms-input-placeholder      {color: transparent} 
 }

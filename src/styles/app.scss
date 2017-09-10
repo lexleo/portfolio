@@ -3,6 +3,7 @@ $green: #00bfa5;
 $dark-green: #009688;
 $grey: #455a64;
 $light-grey: #67787f;
+$light-light-grey: #c4cbcd;
 $black: #373e42;
 $white: #fff;
 
@@ -28,7 +29,10 @@ $phones: 480px;
 
 // Components
 @import 'components/menu';
+@import 'components/auth';
 @import 'components/credits';
+@import 'components/checkbox';
+@import 'components/radio';
 
 
 // Pages

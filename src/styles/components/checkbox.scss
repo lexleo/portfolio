@@ -1,0 +1,68 @@
+.control2 {
+    font-family: arial;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    color: $grey;
+}
+    .control2 input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+.control2_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: $white;
+    border: 1px solid $light-light-grey;
+    border-radius: 3px;
+}
+.control2-radio .control2_indicator {
+    border-radius: 15px;
+}
+
+.control2:hover input ~ .control2_indicator,
+.control2 input:focus ~ .control2_indicator {
+    background: #f0efe9;
+}
+
+.control2 input:checked ~ .control2_indicator {
+    background: $green;
+}
+.control2:hover input:not([disabled]):checked ~ .control2_indicator,
+.control2 input:checked:focus ~ .control2_indicator {
+    background: $green;
+}
+.control2 input:disabled ~ .control2_indicator {
+    background: $light-light-grey;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.control2_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.control2 input:checked ~ .control2_indicator:after {
+    display: block;
+}
+.control2-checkbox .control2_indicator:after {
+    left: 8px;
+    top: 3px;
+    width: 3px;
+    height: 8px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.control2-checkbox input:disabled ~ .control2_indicator:after {
+    border-color: #7b7b7b;
+}
