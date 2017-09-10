@@ -93,7 +93,7 @@
         border-right: 2px solid rgba($white, .5);
     }
     &:hover {
-        opacity: 1;
+        background-color: darken($green, 10%);
     }
 }
 
