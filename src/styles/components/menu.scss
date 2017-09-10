@@ -1,13 +1,19 @@
 .menu {
-    background-color: rgba($white, .7);
+    @include flex(column);
+}
+
+.menu__wrapper {
+    background-color: rgba($white, .85);
     width: rem(380px);
     // height: rem(398px);
     @include flex(column);
-    border-radius: 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 }
 
+
 .menu__img {
-    margin-top: rem(40px);
+    margin-top: rem(38px);
     background: url('../images/photos/me.png');
     width: rem(147px);
     height: rem(147px);
@@ -18,16 +24,16 @@
     color: $grey;
     @include roboto(medium);
     font-size: rem(28px);
-    margin-top: rem(20px);
+    margin-top: rem(9px);
     margin-bottom: 0;
     padding: 0;
 }
 
 .menu__subtitle {
-    color: $lightGrey;
+    color: $light-grey;
     @include roboto(regular);
     font-size: rem(16px);
-    margin-top: rem(5px);
+    margin-top: rem(0px);
     margin-bottom: 0;
     padding: 0;
     user-select: none;    
@@ -35,13 +41,13 @@
 
 .socials__list {
     @include flex();
-    margin: rem(35px) rem(15px);
+    margin: rem(25px) rem(15px) rem(20px) rem(15px);
 }
 
 .socials__item {
     display: inline-flex;
     margin: rem(12px);
-    opacity: .65;
+    opacity: .75;
     transition: .3s;
     &:hover {
         opacity: 1;
@@ -74,7 +80,7 @@
     @include flex();
     margin: 0;
     padding: 0;
-    opacity: .65;
+    opacity: .75;
     white-space: nowrap;
     transition: .3s;
     cursor: pointer;
@@ -101,4 +107,7 @@
     font-size: 16;
     padding: 0 rem(20px);
     user-select: none;
+    &:first-child {
+        padding: 0 rem(30px);
+    }
 }
