@@ -36,6 +36,7 @@
 .control input:checked ~ .control_indicator {
     background: #FFFFFF;
 }
+
 .control:hover input:not([disabled]):checked ~ .control_indicator,
 .control input:checked:focus ~ .control_indicator {
     background: #ffffff;
