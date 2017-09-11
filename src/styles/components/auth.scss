@@ -1,25 +1,29 @@
+#auth {
+    display: none;
+}
+
 .auth__title {
     @include bernier();
     font-size: rem(35px);
     color: $grey;
-    margin-top: rem(40px);
+    margin-top: rem(30px);
     position: relative;
     &:before {
         content: "";
         display: block;
         background: #c4cbcd;
-        height: 6px;
-        width: 24px;
+        height: 5px;
+        width: 22px;
         position: absolute;
-        left: -40px;
+        left: -43px;
         bottom: 45%;
     }
     &:after {
         content: "";
         display: block;
         background: #c4cbcd;
-        height: 6px;
-        width: 24px;
+        height: 5px;
+        width: 22px;
         position: absolute;
         right: -40px;
         bottom: 45%;
@@ -81,6 +85,10 @@
     @include flex();
 }
 
+.auth__confirmation {
+    @include flex(column);
+    margin-top: rem(5px);
+}
 
 .auth__question {
     @include roboto(bold);
@@ -90,8 +98,16 @@
 
 .auth__radios {
     @include flex();
+    justify-content: space-between;
+    width: rem(204px);
+    margin-bottom: rem(32px);
 }
 
 .auth__radio {
-    margin-left: rem(20px);
+    margin: rem(5px);
+}
+
+.buttons__item--auth {
+    border-right: none !important; 
+    border-left: none;
 }

@@ -14,7 +14,33 @@
     <div class="wrapper">
       <div class="welcome-container">
         <div class="login-button">Авторизоваться</div>
-        <div class="menu">
+        <div class="menu" id="menu">
+          <div class="menu__wrapper">
+            <div class="menu__img"></div>
+            <h2 class="menu__title">Алексей Шилякин</h2>
+            <h3 class="menu__subtitle">Личный сайт веб-разработчика</h3>
+            <ul class="socials__list">
+              <li class="socials__item"><a class="social__link" href="https://vk.com/peavey">
+                  <svg class="socials__svg">
+                    <use id="vk" xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="social__link" href="https://github.com/lexleo">
+                  <svg class="socials__svg">
+                    <use id="github" xlink:href="./assets/images/icons/sprite.svg#github"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="social__link" href="">
+                  <svg class="socials__svg">
+                    <use id="linked_in" xlink:href="./assets/images/icons/sprite.svg#linked_in"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <ul class="buttons__list">
+            <li class="buttons__item"><a class="buttons__link" href="works.html">Мои работы</a></li>
+            <li class="buttons__item"><a class="buttons__link" href="about.html">Обо мне</a></li>
+            <li class="buttons__item"><a class="buttons__link" href="blog.html">Блог</a></li>
+          </ul>
+        </div>
+        <div class="menu" id="auth">
           <div class="menu__wrapper">
             <h2 class="auth__title">Авторизуйтесь</h2>
             <form class="auth__form">
@@ -45,11 +71,11 @@
                   <div class="auth__question">Вы точно не робот?</div>
                   <div class="auth__radios">
                     <label class="control control-radio auth__radio">Да
-                      <input type="radio" name="radio" checked="checked">
+                      <input type="radio" name="radio">
                       <div class="control_indicator"></div>
                     </label>
-                    <label class="control control-radio auth__radio">Нет
-                      <input type="radio" name="radio">
+                    <label class="control control-radio auth__radio">Не уверен
+                      <input type="radio" name="radio" checked="checked">
                       <div class="control_indicator"></div>
                     </label>
                   </div>
@@ -58,8 +84,8 @@
             </form>
           </div>
           <ul class="buttons__list">
-            <li class="buttons__item"><a class="buttons__link" href="index.html">На главную</a></li>
-            <li class="buttons__item"><a class="buttons__link" href="about.html">Войти</a></li>
+            <li class="buttons__item buttons__item--auth"><a class="buttons__link" id="mainBtn" href="">На главную</a></li>
+            <li class="buttons__item buttons__item--auth"><a class="buttons__link" href="about.html">Войти</a></li>
           </ul>
         </div>
         <ul class="credits__list">

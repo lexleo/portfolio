@@ -1,4 +1,4 @@
-.menu
+.menu#auth
     .menu__wrapper
         h2.auth__title Авторизуйтесь
         form.auth__form
@@ -20,18 +20,18 @@
                     .auth__question Вы точно не робот?
                     .auth__radios
                         label(class="control control-radio auth__radio") Да
-                            input(type="radio" name="radio" checked="checked")
+                            input(type="radio" name="radio")
                             .control_indicator
 
-                        label(class="control control-radio auth__radio") Нет
-                            input(type="radio" name="radio")
+                        label(class="control control-radio auth__radio") Не уверен
+                            input(type="radio" name="radio" checked="checked")
                             .control_indicator
 
 
     ul.buttons__list
-        li.buttons__item
-            a.buttons__link(href="index.html") На главную
-        li.buttons__item
+        li.buttons__item.buttons__item--auth
+            a.buttons__link#mainBtn(href="") На главную
+        li.buttons__item.buttons__item--auth
             a.buttons__link(href="about.html") Войти
 
 
