@@ -33,8 +33,11 @@ $phones: 480px;
 @import 'components/credits';
 @import 'components/checkbox';
 @import 'components/radio';
+@import 'components/header';
 
 
 // Pages
 
-@import 'pages/welcome'
+@import 'pages/welcome';
+@import 'pages/works';
+

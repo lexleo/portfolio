@@ -1,0 +1,86 @@
+.header {
+    @include flex(column);
+    user-select: none;              
+    position: relative;
+    height: 70vh;
+    width: 100vw;
+}
+
+.header__img {
+    background: url('../images/photos/me.png');
+    width: rem(147px);
+    height: rem(147px);
+    border-radius: 50%;
+    margin: 0;
+}
+
+.header__title {
+    @include roboto();
+    font-size: rem(35px);
+    color: $white;
+    opacity: 1;
+    margin-top: rem(9px);
+    margin-bottom: 0;
+    padding: 0;    
+    
+}
+
+.header__subtitle {
+    @include roboto(light);
+    font-size: rem(16px);
+    color: $white;
+    opacity: .8;
+    margin-top: rem(0px);
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.socials__list.header__socials {
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    margin: 0;
+}
+
+.socials__item--header {
+
+}
+
+.socials__svg--header {
+    fill: $white;
+    opacity: .85;
+    transition: .3s;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.hamburger {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    margin: rem(10px);
+}
+
+.hamburger__svg {
+    width: rem(25px);
+    height: rem(25px);
+    fill: $white;
+}
+
+.next-screen {
+    position: absolute;
+    bottom: 5%;
+    left: auto;
+}
+
+.next-screen__svg {
+    width: rem(25px);
+    height: rem(25px);
+    fill: $white;
+    opacity: .7;
+    transition: .3s;
+    &:hover {
+        opacity: 1;
+    }    
+}
