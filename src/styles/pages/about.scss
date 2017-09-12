@@ -1,0 +1,86 @@
+.about__content {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    color: $grey;
+}
+
+.about__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.about__left {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 50%;
+}
+
+.about__col {
+    @include flex(column);
+    width: 50%;   
+}
+
+.about__col-left {
+    justify-content: flex-start;
+}
+
+.about__title {
+    @include bernier();
+    font-size: rem(63px);
+    text-transform: uppercase;
+    white-space: nowrap;  
+}
+
+.about__img-wrapper {
+    max-width: 443px;
+    max-height: 390px;
+}
+
+.about__img {
+    width: 100%;
+}
+        
+.about__whoami-title {
+    @include bernier;
+    font-size: rem(35px);
+    text-transform: uppercase;
+}
+
+.about__text {
+    @include roboto();
+    font-size: rem(16px);
+}
+
+.skills__title-wrapper {
+    @include flex();
+    text-align: center;
+}
+
+.skills__title {
+    @include bernier();
+    font-size: rem(35px);
+    text-transform: uppercase;    
+}
+
+.skills__text {
+    @include roboto();
+    font-size: rem(16px);
+}
+
+.skills__list {
+
+}
+
+.skills__item {
+
+
+}
+
+.skill__title {
+    @include roboto(medium);
+    font-size: rem(28px);
+}

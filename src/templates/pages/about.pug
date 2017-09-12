@@ -3,6 +3,31 @@ extends ../template
 block variables
     - var title = "Обо мне"
 
+block append head
+    script(src='assets/scipts/libs/snap.svg-min.js')
+
 block content
-    .welcome-container
-        h1.section__title Обо мне
+    .page-container
+        include ../components/header.pug
+
+        .about__content
+            .about__left
+                .about__col.about__col-left
+                    h2.about__title Обо мне
+                .about__col
+                    .about__img-wrapper
+                        img(src='assets/images/photos/me.jpg').about__img                    
+                    h3.about__whoami-title Кто я
+                    p.about__text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+            .about__right
+                .skills__title-wrapper
+                    h3.skills__title Чем я могу быть<br/> вам полезен
+                p.skills__text Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но, давайте по порядку.
+                ul.skills__list
+                    li.skills__item
+                        .skill__title Frontend
+                    li.skills__item
+                        .skill__title Backend
+                    li.skills__item
+                        .skill__title Workflow
+                    

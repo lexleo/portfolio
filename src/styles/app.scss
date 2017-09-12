@@ -6,6 +6,7 @@ $light-grey: #67787f;
 $light-light-grey: #c4cbcd;
 $black: #373e42;
 $white: #fff;
+$beige: #efeee9;
 
 
 // Resolutions
@@ -34,10 +35,12 @@ $phones: 480px;
 @import 'components/checkbox';
 @import 'components/radio';
 @import 'components/header';
+@import 'components/triangle';
 
 
 // Pages
 
 @import 'pages/welcome';
 @import 'pages/works';
+@import 'pages/about';
 

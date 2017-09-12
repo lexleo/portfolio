@@ -1,9 +1,12 @@
 .header {
     @include flex(column);
+    justify-content: flex-start;
     user-select: none;              
     position: relative;
-    height: 70vh;
+    height: 442px;
     width: 100vw;
+    background: url('../images/bg/header-bg.png');
+    background-size: cover;
 }
 
 .header__img {
@@ -11,7 +14,7 @@
     width: rem(147px);
     height: rem(147px);
     border-radius: 50%;
-    margin: 0;
+    margin-top: rem(25px);
 }
 
 .header__title {
@@ -70,7 +73,7 @@
 
 .next-screen {
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     left: auto;
 }
 

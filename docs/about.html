@@ -9,11 +9,73 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="assets/styles/app.min.css">
     <script src="assets/scripts/bundle.js" defer></script>
+    <script src="assets/scipts/libs/snap.svg-min.js"></script>
   </head>
   <body>
     <div class="wrapper">
-      <div class="welcome-container">
-        <h1 class="section__title">Обо мне</h1>
+      <div class="page-container">
+        <header class="header">
+          <div class="header__img"></div>
+          <h2 class="header__title">Алексей Шилякин</h2>
+          <h3 class="header__subtitle">Личный сайт веб-разработчика</h3>
+          <ul class="socials__list header__socials">
+            <li class="socials__item socials__item--header"><a class="social__link" href="https://vk.com/peavey">
+                <svg class="socials__svg socials__svg--header">
+                  <use id="vk" xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="socials__item socials__item--header"><a class="social__link" href="https://github.com/lexleo">
+                <svg class="socials__svg socials__svg--header">
+                  <use id="github" xlink:href="./assets/images/icons/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="socials__item socials__item--header"><a class="social__link" href="">
+                <svg class="socials__svg socials__svg--header">
+                  <use id="linked_in" xlink:href="./assets/images/icons/sprite.svg#linked_in"></use>
+                </svg></a></li>
+          </ul>
+          <div class="hamburger"><a class="hamburger__link" href="">
+              <svg class="hamburger__svg">
+                <use id="hamburger" xlink:href="./assets/images/icons/sprite.svg#hamburger"></use>
+              </svg></a></div>
+          <div class="next-screen"><a class="next-screen__link" href="">
+              <svg class="next-screen__svg">
+                <use id="arrow_down" xlink:href="./assets/images/icons/sprite.svg#arrow_down"></use>
+              </svg></a></div>
+          <div class="triangle-box">
+            <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+              <polygon class="left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+              <polygon class="right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+            </svg>
+          </div>
+        </header>
+        <div class="about__content">
+          <div class="about__left">
+            <div class="about__col about__col-left">
+              <h2 class="about__title">Обо мне</h2>
+            </div>
+            <div class="about__col">
+              <div class="about__img-wrapper"><img class="about__img" src="assets/images/photos/me.jpg"></div>
+              <h3 class="about__whoami-title">Кто я</h3>
+              <p class="about__text">Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!</p>
+            </div>
+          </div>
+          <div class="about__right">
+            <div class="skills__title-wrapper">
+              <h3 class="skills__title">Чем я могу быть<br/> вам полезен</h3>
+            </div>
+            <p class="skills__text">Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но, давайте по порядку.</p>
+            <ul class="skills__list">
+              <li class="skills__item">
+                <div class="skill__title">Frontend</div>
+              </li>
+              <li class="skills__item">
+                <div class="skill__title">Backend</div>
+              </li>
+              <li class="skills__item">
+                <div class="skill__title">Workflow</div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </body>

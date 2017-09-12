@@ -5,6 +5,5 @@
   height: 100vh;
   @include flex(column);
   justify-content: flex-start;
-  background: url('../images/bg/header-bg.png') center center no-repeat;
-  background-size: cover;
 }
+
