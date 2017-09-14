@@ -21,18 +21,21 @@
 
 .about__col {
     @include flex(column);
+    justify-content: flex-start;    
     width: 50%;   
 }
 
 .about__col-left {
-    justify-content: flex-start;
+
 }
 
 .about__title {
     @include bernier();
     font-size: rem(63px);
     text-transform: uppercase;
-    white-space: nowrap;  
+    white-space: nowrap;
+    color: $black;
+    margin: 0;  
 }
 
 .about__img-wrapper {
@@ -44,7 +47,7 @@
     width: 100%;
 }
         
-.about__whoami-title {
+.about__whoami-title, .skills__title {
     @include bernier;
     font-size: rem(35px);
     text-transform: uppercase;
@@ -60,7 +63,8 @@
     text-align: center;
 }
 
-.skills__title {
+
+.skills__group {
     @include bernier();
     font-size: rem(35px);
     text-transform: uppercase;    
@@ -71,16 +75,33 @@
     font-size: rem(16px);
 }
 
-.skills__list {
+.groups__list {
 
+}
+
+.groups__item {
+
+
+}
+
+.group__title {
+    @include roboto(medium);
+    font-size: rem(28px);
+}
+
+.skills__list {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .skills__item {
-
-
+    position: relative;
+    @include flex();
 }
 
 .skill__title {
+    position: absolute;
+    color: $green;
     @include roboto(medium);
-    font-size: rem(28px);
+    font-size: 14px;
 }

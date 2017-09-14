@@ -4,7 +4,7 @@ block variables
     - var title = "Обо мне"
 
 block append head
-    script(src='assets/scipts/libs/snap.svg-min.js')
+    script(src='assets/scripts/libs/snap.svg-min.js')
 
 block content
     .page-container
@@ -23,11 +23,44 @@ block content
                 .skills__title-wrapper
                     h3.skills__title Чем я могу быть<br/> вам полезен
                 p.skills__text Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но, давайте по порядку.
-                ul.skills__list
-                    li.skills__item
-                        .skill__title Frontend
-                    li.skills__item
-                        .skill__title Backend
-                    li.skills__item
-                        .skill__title Workflow
+                ul.groups__list
+                    li.groups__item
+                        .group__title Frontend
+                        ul.skills__list
+                            li.skills__item
+                                .skill__title HTML5
+                                svg(id="html" class="skill__svg")
+                            li.skills__item
+                                .skill__title CSS3
+                                svg(id="css" class="skill__svg")
+                            li.skills__item
+                                .skill__title JavaScript<br/> & jQuery
+                                svg(id="js" class="skill__svg")
+                    li.groups__item
+                        .group__title Backend
+                        ul.skills__list
+                            li.skills__item
+                                .skill__title PHP
+                                svg(id="php" class="skill__svg")
+                            li.skills__item
+                                .skill__title MySQL  
+                                svg(id="mysql" class="skill__svg")
+                            li.skills__item
+                                .skill__title node_js<br/> & npm
+                                svg(id="node" class="skill__svg")
+                            li.skills__item
+                                .skill__title Mongo.db
+                                svg(id="mongo" class="skill__svg")
+                    li.groups__item
+                        .group__title Workflow
+                        ul.skills__list
+                            li.skills__item
+                                .skill__title Git
+                                svg(id="git" class="skill__svg")
+                            li.skills__item
+                                .skill__title Gulp
+                                svg(id="gulp" class="skill__svg")
+                            li.skills__item
+                                .skill__title Bower
+                                svg(id="bower" class="skill__svg")
                     
