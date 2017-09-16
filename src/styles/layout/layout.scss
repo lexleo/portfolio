@@ -35,10 +35,8 @@ body {
   margin: 0 auto;
   position: relative;
   width: 100vw;
-  height: 200vh;
   @include flex(column);
   justify-content: flex-start;
-  background: $beige;
 }
 
 

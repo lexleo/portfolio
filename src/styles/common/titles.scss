@@ -3,3 +3,34 @@
     @include bernier();
     font-size: rem(40px);
 }
+
+.strokes-title {
+    @include bernier();
+    font-size: rem(35px);
+    color: $grey;
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        background: #c4cbcd;
+        height: rem(5px);
+        width: rem(22px);
+        position: absolute;
+        left: rem(-43px);
+        top: rem(20px);
+    }
+    &:after {
+        content: "";
+        display: block;
+        background: #c4cbcd;
+        height: rem(5px);
+        width: rem(22px);
+        position: absolute;
+        right: rem(-40px);
+        top: 20px;
+    }    
+}
+
+.strokes-title--black {
+    color: $black;
+}

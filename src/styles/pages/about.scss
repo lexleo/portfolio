@@ -9,7 +9,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     width: 50%;
+    background: $dark-beige;
+    padding: 0 rem(25px) rem(40px) rem(25px);
+
 }
 
 .about__left {
@@ -17,26 +21,58 @@
     justify-content: center;
     align-items: top;
     width: 50%;
+    background: $beige;
+    padding: rem(10px) rem(25px) rem(40px) rem(25px);
 }
 
 .about__col {
     @include flex(column);
     justify-content: flex-start;    
-    width: 50%;   
+    width: 50%;
 }
 
 .about__col-left {
 
 }
 
-.about__title {
+.strokes-title--whoami {
+    margin-top: rem(30px);
+}
+
+.about__me {
+    position: relative;
+    margin-top: rem(-40px);
+}
+
+.about-me-svg {
+    fill: #e6e5e0;
+    width: rem(340px);
+}
+
+
+.strokes-title--about {
+    @include flex();
+    width: 100%;
+    height: 100%;
     @include bernier();
     font-size: rem(63px);
     text-transform: uppercase;
     white-space: nowrap;
     color: $black;
-    margin: 0;  
+    margin-bottom: 0;  
+    position: absolute;
+    margin-top: rem(10px);
+    &:before {
+        left: 35px;
+        top: 75px;
+    }
+    &:after {
+        right: 35px;
+        top: 75px;
+    }
+
 }
+
 
 .about__img-wrapper {
     max-width: 443px;
@@ -46,6 +82,7 @@
 .about__img {
     width: 100%;
 }
+
         
 .about__whoami-title, .skills__title {
     @include bernier;
@@ -53,14 +90,24 @@
     text-transform: uppercase;
 }
 
+.about__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
 .about__text {
     @include roboto();
     font-size: rem(16px);
+    margin-bottom: rem(10px);
+    padding-right: rem(10px);
 }
 
 .skills__title-wrapper {
-    @include flex();
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 
@@ -73,20 +120,23 @@
 .skills__text {
     @include roboto();
     font-size: rem(16px);
+    padding-right: rem(100px);    
 }
 
 .groups__list {
+    margin-top: rem(40px);
+    margin-bottom: rem(30px);
 
 }
 
 .groups__item {
-
-
+    margin: rem(10px) 0;
 }
 
 .group__title {
     @include roboto(medium);
     font-size: rem(28px);
+    padding-left: rem(18px);
 }
 
 .skills__list {
@@ -103,5 +153,84 @@
     position: absolute;
     color: $green;
     @include roboto(medium);
-    font-size: 14px;
+    font-size: rem(14px);
 }
+
+.map {
+    @include flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url('../../assets/images/map/map.svg') center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: rem(1080px);
+}
+
+.contacts-wrapper {
+    width: rem(378px);
+    height: rem(293px);
+    background: $white;
+    opacity: .85;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: rem(15px);
+    border-radius: 5px;
+}
+
+.contacts__list {
+    @include flex(column);
+    height: 100%;
+    margin-top: rem(30px);
+}
+
+.contacts__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: rem(5px);
+    width: 100%;
+    margin-bottom: rem(25px);
+    &:last-child {
+        margin-bottom: rem(40px);
+    }
+}
+
+.skype__svg {
+    width: rem(20px);
+    height: rem(20px);
+    fill: $green;
+}
+
+.mail__svg {
+    width: rem(18px);
+    height: rem(18px);
+    fill: $green;
+}
+
+.phone__svg {
+    width: rem(17px);
+    height: rem(17px);
+    fill: $green;
+}
+
+.map-marker__svg {
+    width: rem(22px);
+    height: rem(22px);
+    fill: $green;
+}
+
+.contacts__desc {
+    @include roboto(medium);
+    font-size: rem(16px);
+    padding-left: rem(10px);
+}
+
+.strokes-title--contacts {
+    margin-top: rem(20px);
+}
+
+
+

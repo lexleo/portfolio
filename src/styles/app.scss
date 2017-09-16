@@ -7,6 +7,7 @@ $light-light-grey: #c4cbcd;
 $black: #373e42;
 $white: #fff;
 $beige: #efeee9;
+$dark-beige: #eeebdf;
 
 
 // Resolutions
@@ -35,7 +36,9 @@ $phones: 480px;
 @import 'components/checkbox';
 @import 'components/radio';
 @import 'components/header';
+@import 'components/footer';
 @import 'components/triangle';
+@import 'components/round-socials';
 
 
 // Pages

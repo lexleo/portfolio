@@ -1,0 +1,24 @@
+.round-socials__list {
+    @include flex();
+}
+
+.round-socials__item {
+  @include flex();
+  opacity: .85;
+  margin: 0 rem(5px);
+}
+
+.round-socials__item svg {
+  fill: $black;
+  transition: all .3s;
+  height: 30px;
+  width: 30px;
+}
+
+.round-socials__item:hover svg {
+  fill: #fff;
+}
+
+.round-socials__item:hover svg circle{
+  fill: none;
+}

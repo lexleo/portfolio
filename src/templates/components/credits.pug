@@ -1,7 +1,9 @@
-ul.credits__list
-    li.credits__item
-        span © Алексей Шилякин 
-    li.credits__item
-        span Создано с любовью в LoftSchool
-    li.credits__item
-        span 2017
+mixin credits(listClass)
+    - listClass = listClass || 'credits__list'
+    ul(class = listClass)
+        li.credits__item
+            span © Алексей Шилякин 
+        li.credits__item
+            span Создано с любовью в LoftSchool
+        li.credits__item
+            span 2017

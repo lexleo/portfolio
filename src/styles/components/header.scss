@@ -1,13 +1,30 @@
 .header {
     @include flex(column);
-    justify-content: flex-start;
     user-select: none;              
     position: relative;
-    height: 442px;
+    height: 650px;
     width: 100vw;
     background: url('../images/bg/header-bg.png');
     background-size: cover;
 }
+
+.header__content {
+    @include flex(column);
+    position: relative;
+}
+
+.header__svg {
+    fill: rgba($white, .06);
+    width: rem(1150px);
+    height: rem(430px);
+    padding-bottom: rem(50px);
+}
+
+.header__info {
+    @include flex(column);
+    position: absolute;
+}
+
 
 .header__img {
     background: url('../images/photos/me.png');
@@ -22,7 +39,7 @@
     font-size: rem(35px);
     color: $white;
     opacity: 1;
-    margin-top: rem(9px);
+    margin-top: rem(30px);
     margin-bottom: 0;
     padding: 0;    
     
@@ -31,7 +48,7 @@
 .header__subtitle {
     @include roboto(light);
     font-size: rem(16px);
-    color: $white;
+    color: rgba($white, .8);
     opacity: .8;
     margin-top: rem(0px);
     margin-bottom: 0;
@@ -73,17 +90,19 @@
 
 .next-screen {
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     left: auto;
+    opacity: .7;
+    transition: .3s;
+    z-index: 100;
+    cursor: pointer;
+    &:hover {
+        opacity: 1;
+    }      
 }
 
 .next-screen__svg {
     width: rem(25px);
     height: rem(25px);
     fill: $white;
-    opacity: .7;
-    transition: .3s;
-    &:hover {
-        opacity: 1;
-    }    
 }

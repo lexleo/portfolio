@@ -2,34 +2,6 @@
     display: none;
 }
 
-.auth__title {
-    @include bernier();
-    font-size: rem(35px);
-    color: $grey;
-    margin-top: rem(30px);
-    position: relative;
-    &:before {
-        content: "";
-        display: block;
-        background: #c4cbcd;
-        height: 5px;
-        width: 22px;
-        position: absolute;
-        left: -43px;
-        bottom: 45%;
-    }
-    &:after {
-        content: "";
-        display: block;
-        background: #c4cbcd;
-        height: 5px;
-        width: 22px;
-        position: absolute;
-        right: -40px;
-        bottom: 45%;
-    }    
-}
-
 .auth__row {
     @include flex();
     margin-bottom: rem(18px);
@@ -43,6 +15,10 @@
     @include flex();
     height: rem(44px);
     width: rem(44px);
+}
+
+.strokes-title--auth {
+    margin-top: rem(30px);
 }
 
 .auth__svg-login {

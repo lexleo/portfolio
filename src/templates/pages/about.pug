@@ -13,15 +13,19 @@ block content
         .about__content
             .about__left
                 .about__col.about__col-left
-                    h2.about__title Обо мне
+                    .about__me
+                        h2.strokes-title.strokes-title--about Обо мне
+                        +icon('about-me-svg', 'about_header')
                 .about__col
                     .about__img-wrapper
                         img(src='assets/images/photos/me.jpg').about__img                    
-                    h3.about__whoami-title Кто я
-                    p.about__text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+                    h3.strokes-title.strokes-title--whoami Кто я
+                    .about__text-wrapper
+                        p.about__text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                        p.about__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
             .about__right
                 .skills__title-wrapper
-                    h3.skills__title Чем я могу быть<br/> вам полезен
+                     h3.strokes-title Чем я могу быть<br/> вам полезен
                 p.skills__text Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но, давайте по порядку.
                 ul.groups__list
                     li.groups__item
@@ -63,4 +67,23 @@ block content
                             li.skills__item
                                 .skill__title Bower
                                 svg(id="bower" class="skill__svg")
-                    
+        .map
+            .contacts-wrapper
+                .strokes-title.strokes-title--black.strokes-title--contacts Контакты
+                ul.contacts__list
+                    li.contacts__item
+                        +icon("skype__svg", "skype")
+                        .contacts__desc lexleo
+                    li.contacts__item
+                        +icon("mail__svg", "envelope")
+                        .contacts__desc lexleo@deltaplan.pro
+                    li.contacts__item
+                        +icon("phone__svg", "phone")
+                        .contacts__desc +7 962 856 75 57
+                    li.contacts__item
+                        +icon("map-marker__svg", "map_marker")
+                        .contacts__desc г. Краснодар, ул. Гаврилова 71/1
+        
+            include ../components/footer.pug
+
+        

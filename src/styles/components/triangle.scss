@@ -5,11 +5,12 @@
   left: auto;
   right: auto;
   margin: 0;
+  z-index: 0;
 }
 
 .traingle .left{
   fill: $beige;
 }
 .traingle .right{
-  fill: $beige;
+  fill: $dark-beige;
 }

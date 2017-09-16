@@ -22,7 +22,7 @@ class Skill {
 
     this.baseCircle = this.createCircle(cx, cy, radius, {
       fill: 'none',
-      stroke: '#1bb696',
+      stroke: '#10c1a8',
       strokeWidth: 15,
       strokeDasharray: this.length,
       strokeDashoffset: this.length
