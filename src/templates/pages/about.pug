@@ -5,6 +5,9 @@ block variables
 
 block append head
     script(src='assets/scripts/libs/snap.svg-min.js')
+    link(rel="stylesheet", type="text/css", href="https://api.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.css")
+    script(src='https://api.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.js')
+
 
 block content
     .page-container
@@ -14,18 +17,21 @@ block content
             .about__left
                 .about__col.about__col-left
                     .about__me
-                        h2.strokes-title.strokes-title--about Обо мне
                         +icon('about-me-svg', 'about_header')
+                        .about__title-wrapper
+                            h2.strokes-title.strokes-title--about Обо мне
                 .about__col
                     .about__img-wrapper
                         img(src='assets/images/photos/me.jpg').about__img                    
-                    h3.strokes-title.strokes-title--whoami Кто я
+                    .whoami-title-wrapper
+                        h3.strokes-title.strokes-title--whoami Кто я
                     .about__text-wrapper
-                        p.about__text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                        p.about__text Я веб-разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                         p.about__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
             .about__right
-                .skills__title-wrapper
-                     h3.strokes-title Чем я могу быть<br/> вам полезен
+                .skills-title-wrapper
+                     .strokes-title.strokes-title--skills Чем я могу быть
+                     .strokes-title.strokes-title-pure вам полезен
                 p.skills__text Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но, давайте по порядку.
                 ul.groups__list
                     li.groups__item
@@ -67,23 +73,28 @@ block content
                             li.skills__item
                                 .skill__title Bower
                                 svg(id="bower" class="skill__svg")
-        .map
+        .map-wrapper
+            #map
             .contacts-wrapper
                 .strokes-title.strokes-title--black.strokes-title--contacts Контакты
                 ul.contacts__list
                     li.contacts__item
-                        +icon("skype__svg", "skype")
-                        .contacts__desc lexleo
+                        a.contacts__link(href="skype:+79648567557?call")                    
+                            +icon("skype__svg", "skype")
+                            .contacts__desc lexleo
                     li.contacts__item
-                        +icon("mail__svg", "envelope")
-                        .contacts__desc lexleo@deltaplan.pro
+                        a.contacts__link(href="mailto:lexleo@deltaplan.pro")
+                            +icon("mail__svg", "envelope")
+                            .contacts__desc lexleo@deltaplan.pro
                     li.contacts__item
-                        +icon("phone__svg", "phone")
-                        .contacts__desc +7 962 856 75 57
+                        a.contacts__link(href="tel:+79648567557")
+                            +icon("phone__svg", "phone")
+                            .contacts__desc +7 962 856 75 57
                     li.contacts__item
                         +icon("map-marker__svg", "map_marker")
                         .contacts__desc г. Краснодар, ул. Гаврилова 71/1
         
             include ../components/footer.pug
-
+    
+        script(src='assets/scripts/map.js')
         

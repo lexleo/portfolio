@@ -79,12 +79,12 @@
     position: absolute;
     right: 1%;
     top: 1%;
-    margin: rem(10px);
+    margin: rem(10px) rem(15px);
 }
 
 .hamburger__svg {
-    width: rem(25px);
-    height: rem(25px);
+    width: rem(35px);
+    height: rem(35px);
     fill: $white;
 }
 

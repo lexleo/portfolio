@@ -3,6 +3,10 @@
     align-items: top;
     justify-content: center;
     color: $grey;
+    width: 100%;
+    @include tablets {
+        flex-direction: column;    
+    }
 }
 
 .about__right {
@@ -13,7 +17,9 @@
     width: 50%;
     background: $dark-beige;
     padding: 0 rem(25px) rem(40px) rem(25px);
-
+    @include tablets {
+        width: 100%;
+    }
 }
 
 .about__left {
@@ -22,55 +28,73 @@
     align-items: top;
     width: 50%;
     background: $beige;
-    padding: rem(10px) rem(25px) rem(40px) rem(25px);
+    padding: rem(10px) rem(5px) rem(40px) 0;
+    @include tablets {
+        width: 100%;
+        flex-direction: column;
+    }    
 }
 
 .about__col {
-    @include flex(column);
-    justify-content: flex-start;    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     width: 50%;
+    margin: 0;
+    @include tablets {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: rem(30px);
+    }      
 }
 
 .about__col-left {
-
+    align-items: bottom;
+    margin: 0;
+    @include tablets {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }      
 }
 
 .strokes-title--whoami {
     margin-top: rem(30px);
+    margin-bottom: rem(30px);
 }
 
 .about__me {
+    @include flex(column);
+    text-align: center;
     position: relative;
-    margin-top: rem(-40px);
+    margin-top: rem(-72px);
+    margin-right: rem(20px);
+    max-width: rem(340px);
+    margin-left: auto;
+    @include tablets {
+        margin: auto;    
+    }      
 }
 
 .about-me-svg {
     fill: #e6e5e0;
-    width: rem(340px);
+    width: 100%;
+    margin-left: auto;
 }
 
+.about__title-wrapper {
+    position: absolute;
+}
 
 .strokes-title--about {
-    @include flex();
-    width: 100%;
-    height: 100%;
     @include bernier();
     font-size: rem(63px);
     text-transform: uppercase;
     white-space: nowrap;
     color: $black;
-    margin-bottom: 0;  
-    position: absolute;
-    margin-top: rem(10px);
-    &:before {
-        left: 35px;
-        top: 75px;
-    }
-    &:after {
-        right: 35px;
-        top: 75px;
-    }
-
+    margin: 0;
 }
 
 
@@ -93,7 +117,7 @@
 .about__text-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
 }
 
@@ -101,16 +125,35 @@
     @include roboto();
     font-size: rem(16px);
     margin-bottom: rem(10px);
-    padding-right: rem(10px);
+    padding-right: rem(20px);
+    max-width: 443px;
+    @include tablets {
+        padding-right: 0;
+    }  
 }
 
-.skills__title-wrapper {
-    display: flex;
-    justify-content: center;
+.whoami-title-wrapper {
+    @include flex();
     width: 100%;
+    text-align: center;
+}
+
+.skills-title-wrapper {
+    @include flex(column);
+    width: 100%;
+    text-align: center;
+    margin-bottom: rem(20px);
+    padding-right: rem(60px);
+    @include tablets {
+        padding-top: rem(35px);
+        padding-right: 0;
+    }      
 }
 
 
+.strokes-title--skills{
+    margin-top: rem(-8px);
+}
 .skills__group {
     @include bernier();
     font-size: rem(35px);
@@ -120,17 +163,29 @@
 .skills__text {
     @include roboto();
     font-size: rem(16px);
-    padding-right: rem(100px);    
+    padding-right: rem(70px);
+    padding-left: rem(20px);
 }
 
 .groups__list {
+    display: flex;
+    flex-direction: column;
+    align-items: bottom;
+    justify-content: center;
+    width: 100%;
     margin-top: rem(40px);
     margin-bottom: rem(30px);
 
 }
 
 .groups__item {
+    display: flex;
+    flex-direction: column;
+    align-items: top;
     margin: rem(10px) 0;
+    @include tablets {
+        text-align: center;
+    }  
 }
 
 .group__title {
@@ -141,12 +196,23 @@
 
 .skills__list {
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    @include tablets {
+        @include flex();
+    } 
+    @include phones {
+        @include flex();
+    }    
 }
 
 .skills__item {
     position: relative;
     @include flex();
+    margin: 0;
 }
 
 .skill__title {
@@ -156,28 +222,39 @@
     font-size: rem(14px);
 }
 
-.map {
+.map-wrapper {
     @include flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: $dark-beige;
+    width: 100%;
+}
+
+#map {
     width: 100%;
     height: 100%;
-    position: relative;
-    background: url('../../assets/images/map/map.svg') center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: rem(1080px);
+    top: 0;
+    bottom: 0;
 }
 
 .contacts-wrapper {
     width: rem(378px);
-    height: rem(293px);
     background: $white;
-    opacity: .85;
+    opacity: .9;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
     padding: rem(15px);
     border-radius: 5px;
+    position: absolute;
+    margin-top: rem(-80px);
+    @include phones {
+        top: 0;
+        margin-top: 0;
+        width: 100%;
+    }
 }
 
 .contacts__list {
@@ -192,33 +269,55 @@
     justify-content: flex-start;
     margin: rem(5px);
     width: 100%;
-    margin-bottom: rem(25px);
+    margin-bottom: rem(15px);
     &:last-child {
-        margin-bottom: rem(40px);
+        margin-bottom: rem(20px);
     }
 }
 
+.contacts__link {
+    @include flex();
+    text-decoration: none;
+    color: $grey;
+    &:hover .mail__svg {
+        fill: $dark-green;
+    }
+    &:hover .phone__svg {
+        fill: $dark-green;
+    }
+    &:hover .skype__svg {
+        fill: $dark-green;
+    }
+}
+
+
+
 .skype__svg {
-    width: rem(20px);
-    height: rem(20px);
+    width: rem(23px);
+    height: rem(23px);
     fill: $green;
+    transition: .3s;
 }
 
 .mail__svg {
-    width: rem(18px);
-    height: rem(18px);
+    width: rem(21px);
+    height: rem(21px);
     fill: $green;
+    transition: .3s;
+    
 }
 
 .phone__svg {
-    width: rem(17px);
-    height: rem(17px);
+    width: rem(20px);
+    height: rem(20px);
     fill: $green;
+    transition: .3s;
+    
 }
 
 .map-marker__svg {
-    width: rem(22px);
-    height: rem(22px);
+    width: rem(25px);
+    height: rem(25px);
     fill: $green;
 }
 
@@ -229,7 +328,7 @@
 }
 
 .strokes-title--contacts {
-    margin-top: rem(20px);
+    margin-top: rem(10px);
 }
 
 

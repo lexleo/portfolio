@@ -2,7 +2,7 @@
     @include flex();
     position: absolute;
     bottom: 5%;
-    left: auto;
+    left: auto;   
 }
 
 .credits__item {
@@ -12,6 +12,8 @@
     padding: 0 rem(6px);
     position: relative;
     user-select: none;
+    white-space: nowrap;
+    flex-wrap: nowrap;
     &:first-child {
         &:after {
             content: "";
@@ -37,4 +39,8 @@
 
 .footer-credits__list {
     @include flex();
+    @include tablets {
+        margin-top: rem(10px);
+    }  
+    
 }

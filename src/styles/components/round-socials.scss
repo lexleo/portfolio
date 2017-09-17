@@ -1,5 +1,8 @@
 .round-socials__list {
     @include flex();
+    @include tablets {
+        margin-top: rem(15px);
+    }      
 }
 
 .round-socials__item {
@@ -11,8 +14,8 @@
 .round-socials__item svg {
   fill: $black;
   transition: all .3s;
-  height: 30px;
-  width: 30px;
+  height: 37px;
+  width: 37px;
 }
 
 .round-socials__item:hover svg {
