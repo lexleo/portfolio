@@ -6,7 +6,7 @@ var map = new mapboxgl.Map({
     hash: false
 });
 
-// Dizable zoom by Scroll
+// Dizable Zoom by scroll
 map.scrollZoom.disable();
 
 // Define element to draw map-marker in
@@ -24,15 +24,33 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var link = document.querySelector('.contacts__link-map');
   var mapMarker = document.querySelector('.map-marker');
   
+  // get transform: translate css parameters
+  function getTranslateXY() {
+    var style = window.getComputedStyle(mapMarker);
+    var matrix = new WebKitCSSMatrix(style.webkitTransform);
+    var translate = {
+      x: +matrix.e,
+      y: +matrix.f
+    };
+    return translate;
+  }
+
+  // Value move on
+  const shift = -15;
   
+  // move
   link.onmouseover = function(){
-    mapMarker.classList.add("map-marker-up");
+    var translate = getTranslateXY();
+    var newStyle = "transform: translate(" + translate.x + "px, " + (translate.y + shift) + "px);";                      
+    mapMarker.style = newStyle;
   };
 
+  // move back
   link.onmouseleave = function(){
-    mapMarker.classList.remove("map-marker-up");
+    var translate = getTranslateXY();
+    var oldStyle = "transform: translate(" + translate.x + "px, " + (translate.y - shift) + "px);";                      
+    mapMarker.style = oldStyle;
   };
-
 
 });
 

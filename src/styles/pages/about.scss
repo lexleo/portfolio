@@ -154,6 +154,7 @@
 .strokes-title--skills{
     margin-top: rem(-8px);
 }
+
 .skills__group {
     @include bernier();
     font-size: rem(35px);
@@ -294,8 +295,8 @@
 }
 
 .skype__svg {
-    width: rem(23px);
-    height: rem(23px);
+    width: rem(25px);
+    height: rem(25px);
     fill: $green;
     transition: .3s;
 }
@@ -317,8 +318,8 @@
 }
 
 .map-marker__svg {
-    width: rem(25px);
-    height: rem(25px);
+    width: rem(27px);
+    height: rem(27px);
     fill: $green;
     transition: .3s;
 }
