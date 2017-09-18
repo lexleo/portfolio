@@ -1,11 +1,13 @@
 .map-marker {
   background: url('../../assets/images/icons/map-marker.svg') center center no-repeat;
-//   width: 38px;
-//   height: 55px;
+  width: 32px;
+  height: 47px;
+  background-size: cover;
+  transition: .3s;
+  display: table;
+}
+
+.map-marker-up {
   width: 38px;
   height: 55px;
-  background-size: cover;
-//   cursor: pointer;
-  transition: .3s;
-
 }
