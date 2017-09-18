@@ -288,9 +288,10 @@
     &:hover .skype__svg {
         fill: $dark-green;
     }
+    &:hover .map-marker__svg {
+        fill: $dark-green;
+    }
 }
-
-
 
 .skype__svg {
     width: rem(23px);
@@ -319,6 +320,7 @@
     width: rem(25px);
     height: rem(25px);
     fill: $green;
+    transition: .3s;
 }
 
 .contacts__desc {
