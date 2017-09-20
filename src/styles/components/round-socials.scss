@@ -14,8 +14,13 @@
 .round-socials__item svg {
   fill: $black;
   transition: all .3s;
-  height: 37px;
-  width: 37px;
+  height: 36px;
+  width: 36px;
+  opacity: .5;
+  transition: .3s;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .round-socials__item:hover svg {

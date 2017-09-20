@@ -4,6 +4,7 @@
     justify-content: center;
     color: $grey;
     width: 100%;
+    position: relative;
     @include tablets {
         flex-direction: column;    
     }
@@ -16,6 +17,7 @@
     align-items: flex-start;
     width: 50%;
     background: $dark-beige;
+    position: relative;    
     padding: 0 rem(25px) rem(40px) rem(25px);
     @include tablets {
         width: 100%;
@@ -28,6 +30,7 @@
     align-items: top;
     width: 50%;
     background: $beige;
+    position: relative;
     padding: rem(10px) rem(5px) rem(40px) 0;
     @include tablets {
         width: 100%;
@@ -92,7 +95,6 @@
     @include bernier();
     font-size: rem(63px);
     text-transform: uppercase;
-    white-space: nowrap;
     color: $black;
     margin: 0;
 }
@@ -153,6 +155,9 @@
 
 .strokes-title--skills{
     margin-top: rem(-8px);
+    @include tablets {
+        margin-top: rem(25px);
+    }
 }
 
 .skills__group {
@@ -333,6 +338,5 @@
 .strokes-title--contacts {
     margin-top: rem(10px);
 }
-
 
 

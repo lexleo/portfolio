@@ -49,14 +49,20 @@
               <svg class="next-screen__svg">
                 <use id="arrow_down" xlink:href="./assets/images/icons/sprite.svg#arrow_down"></use>
               </svg></a></div>
-          <div class="triangle-box">
-            <svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
-              <polygon class="left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
-              <polygon class="right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
-            </svg>
-          </div>
         </header>
-        <div class="about__content">
+        <section class="about__content">
+          <div class="triangles">
+            <div class="triangle-wrapper triangle-wrapper--left">
+              <svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 85" preserveaspectratio="none">
+                <polygon class="left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+              </svg>
+            </div>
+            <div class="triangle-wrapper triangle-wrapper--right">
+              <svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewbox="500 0 500 85" preserveaspectratio="none">
+                <polygon class="right" points="1000,0   1000,86   500,86   500,75.5"> </polygon>
+              </svg>
+            </div>
+          </div>
           <div class="about__left">
             <div class="about__col about__col-left">
               <div class="about__me">
@@ -143,7 +149,7 @@
               </li>
             </ul>
           </div>
-        </div>
+        </section>
         <div class="map-wrapper">
           <div id="map"></div>
           <div class="contacts-wrapper">
@@ -235,13 +241,7 @@
             </div>
             <div class="footer__row">
               <div class="footer__desc">Я веб-разработчик из Краснодара, и этот сайт я сделал в рамках обучения в Школе онлайн-образования LoftSchool.</div>
-              <div class="footer__credits">
-                <ul class="footer-credits__list">
-                  <li class="credits__item"><span>© Алексей Шилякин </span></li>
-                  <li class="credits__item"><span>Создано с любовью в LoftSchool</span></li>
-                  <li class="credits__item"><span>2017</span></li>
-                </ul>
-              </div>
+              <div class="footer__credits">© Алексей Шилякин | создано в LoftSchool | 2017</div>
             </div>
           </footer>
         </div>

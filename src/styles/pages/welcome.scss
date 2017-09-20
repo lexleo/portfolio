@@ -31,3 +31,13 @@
     border-color: $light-light-grey;
   }
 }
+
+.credits {
+  @include flex();
+  position: absolute;
+  bottom: 4%;
+  left: auto;
+  @include roboto(light);
+  color: rgba($white, .65);
+  font-size: 16px;
+}

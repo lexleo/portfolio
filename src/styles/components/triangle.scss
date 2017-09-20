@@ -1,15 +1,35 @@
-.triangle-box {
-  width: 100%;
-  position: absolute;
-  bottom: -8px;
-  left: auto;
-  right: auto;
-  margin: 0;
+.triangles {
+  display: flex;
 }
+
+.triangle-wrapper {
+    display: flex;
+    position: absolute;  
+    width: 50%;
+    bottom: 100%;
+    @include tablets {
+      width: 50%;
+    }
+    svg {
+      width: 100%;
+    }
+}
+
+.triangle-wrapper--left {
+  left: 0;
+}
+
+.triangle-wrapper--right {
+  right: 0;
+}
+
 
 .triangle .left{
   fill: $beige;
 }
 .triangle .right{
   fill: $dark-beige;
+  @include tablets {
+    fill: $beige;
+  }
 }

@@ -13,7 +13,15 @@ block content
     .page-container
         include ../components/header.pug
 
-        .about__content
+        section.about__content
+            .triangles
+                .triangle-wrapper.triangle-wrapper--left
+                    svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 85" preserveaspectratio="none" class="triangle")
+                        polygon(class = "left" points="0,0   0,86   500.8,86   500.8,75.5")
+                .triangle-wrapper.triangle-wrapper--right
+                    svg(xmlns="http://www.w3.org/2000/svg" viewbox="500 0 500 85" preserveaspectratio="none" class="triangle")
+                        polygon(class = "right" points="1000,0   1000,86   500,86   500,75.5") 
+
             .about__left
                 .about__col.about__col-left
                     .about__me
@@ -28,6 +36,7 @@ block content
                     .about__text-wrapper
                         p.about__text Я веб-разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                         p.about__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+            
             .about__right
                 .skills-title-wrapper
                      .strokes-title.strokes-title--skills Чем я могу быть
