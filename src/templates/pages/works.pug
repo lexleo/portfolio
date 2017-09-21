@@ -7,111 +7,23 @@ block content
     .page-container
         include ../components/header.pug
 
-        section.works
-        .section__triangle.section__triangle_left
-            .triangle.triangle_color_white
-                svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 100" preserveaspectratio="none")
-                    polygon(points="0,100 0,0 501,85 501,100")
-        .section__triangle.section__triangle_right
-            .triangle.triangle_color_white
-                svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 100" preserveaspectratio="none")
-                    polygon(points="0,85 0,100 501,100 501,0")
+        section.works__wrapper
 
-        .works__header
-            .section-title__header Мои работы
-                .section-title__bg
-                    +icon('icon_fill_black', 'works_header')
+            .triangles
+                .triangle-wrapper.triangle-wrapper--left.triangle-white
+                    svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 85" preserveaspectratio="none" class="triangle")
+                        polygon(class = "triangle-white" points="0,0   0,86   500.8,86   500.8,75.5")
+                .triangle-wrapper.triangle-wrapper--right.triangle-white
+                    svg(xmlns="http://www.w3.org/2000/svg" viewbox="500 0 500 85" preserveaspectratio="none" class="triangle")
+                        polygon(class = "triangle-white" points="1000,0   1000,86   500,86   500,75.5")
 
-        .works__slider
-            .slider
-                .slider__description
-                    .project
-                        .project__title
-                            .section-title__subheader Сайт школы онлайн образования
-                        .project__technologies HTML, CSS, JAVASCRIPT
-                        .project__link
-                            a.btn.btn_show(href='#')
-                                .btn__icon
-                                    +icon('icon_fill_white','link')
-                                span Посмотреть сайт
+            .works__header
+                .strokes-title.strokes-title--works Мои работы
+                .header__content-bg
+                    +icon('works-header__svg', 'works_header')
 
+            
+        include ../components/slider.pug
 
-                .slider__image
-                    img.responsive-img(src='assets/images/works/work-1.png')
-                .slider__controls.controls
-                    .controls__left
-                        .controls__caption
-                            .controls__icon
-                                +icon('icon_fill_white', 'portf_arrow_down')
-                                .controls__icon-bg
-                                    +icon('icon_fill_black', 'portf_arrow_down')
-                        .controls__bg
-                            img.responsive-img(src='assets/images/works/work-2.jpg')
-                    .controls__right
-                        .controls__caption
-                            .controls__icon
-                                +icon('icon_fill_white', 'portf_arrow_up')
-                                .controls__icon-bg
-                                    +icon('icon_fill_blach', 'portf_arrow_up')
-                        .controls__bg
-                            img.responsive-img(src='assets/images/works/work-3.jpg')
-
-    section.section.mentions
-        .mentions__content
-            .mentions__header
-                .section-title__header Что обо мне говорят
-                    .section-title__bg
-                        +icon('icon_fill_black', 'about_header')
-            .mentions__opinions
-                ul.mentions__list
-                    li.mentions__item
-                        .mention
-                            .mention__quote
-                                .mention__icon
-                                    +icon('quote','quote')
-                            .mention__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                            .mention__owner
-                                .owner
-                                    .owner__photo
-                                        img.responsive-img(src='assets/images/mentions/owner-1.jpg')
-                                    .owner__desc 
-                                        .owner__name Ковальчук Дмитрий
-                                        .owner__position основатель Liftschool
-                    li.mentions__item
-                        .mention
-                            .mention__quote
-                                .mention__icon
-                                    +icon('quote','quote')
-                            .mention__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-                            .mention__owner
-                                .owner
-                                    .owner__photo
-                                        img.responsive-img(src='assets/images/mentions/owner-2.jpg')
-                                    .owner__desc 
-                                        .owner__name Сабанцев Владимир
-                                        .owner__position преподаватель      
-
-            .mentions__feedback
-                .feedback
-                    .feedback__wrapper
-                        svg(xmlns='http://www.w3.org/2000/svg', version='1.1', style='display: none')
-                            defs
-                                filter#blur
-                                    fegaussianblur(in='SourceGraphic', stddeviation='10,10')
-
-                        .feedback__header
-                            .section-title__subheader.section-title__subheader_form Связаться со мной
-                        .feedback__form
-                            form(id='feedback-form', class='form')
-                                input(type='text', id='name', placeholder='Имя', class='form__input')
-                                input(type='enail', id='email', placeholder='Email', class='form__input')
-                                textarea(id='message', rows='3', class='form__input', placeholder='Ваше сообщение')
-                    .feedback__buttons
-                        button(form='feedback-form', type='submit', class='btn btn_form') Отправить
-                        button(form='feedback-form', type='reset', class='btn btn_form') Очистить
-
-            .mentions__scroll.scroll
-                a.scroll__link(href='#')
-                    .scroll__icon
-                        +icon('icon_fill_white', 'portf_arrow_up')    
-
+    
+    

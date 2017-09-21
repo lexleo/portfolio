@@ -82,9 +82,11 @@
 }
 
 .about-me-svg {
-    fill: #e6e5e0;
+    fill: $light-light-grey;
     width: 100%;
     margin-left: auto;
+    opacity: .5;
+    margin-bottom: rem(10px);
 }
 
 .about__title-wrapper {
