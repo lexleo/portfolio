@@ -1,9 +1,25 @@
-.works-container {
-  margin: 0 auto;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  @include flex(column);
-  justify-content: flex-start;
+.works {
+  padding-top: 35px;
+
+  @include tablets {
+      padding-top: 10px;
+  }
 }
 
+.works__header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 55px;
+
+  @include tablets {
+      margin-bottom: 35px;
+  }
+}
+
+.works__slider {
+  height: 750px;
+
+  @include tablets {
+      height: auto;
+  }
+}
