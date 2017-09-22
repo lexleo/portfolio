@@ -3,7 +3,13 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    height: 750px;
+    height: rem(750px);
+
+    @include tablets {
+        flex-direction: row;
+        height: auto;
+    }    
+
 }
 
 .slider__description {
@@ -20,30 +26,6 @@
         order: 2;
     }
 }
-
-.slider__screens {
-    width: 50%;
-    height: 75%;
-}
-
-
-.slider__controls {
-    width: 50%;
-    height: 25%;    
-    @include flex;
-}
-
-.slider__control {
-    width: 50%;
-    height: 100%;
-    background: green;
-}
-
-
-
-
-
-
 
 .project {
     min-width: 425px;
@@ -77,6 +59,10 @@
     @include roboto(medium);
     font-size: rem(16px);
     padding: rem(13px) rem(23px);
+    transition: .3s;
+    &:hover {
+        background: $dark-green;
+    }
 }
 
 
@@ -94,11 +80,6 @@
 }
 
 
-.slider-right {
-    @include flex(column);
-    width: 50%;
-}
-
 .slider__screens {
     width: 50%;
     height: 75%;
@@ -113,33 +94,37 @@
     }
 }
 
-.slider-img {
-    width: 100%;
-    height: 100%;
+.slider__controls {
+    width: 50%;
+    height: 25%;    
+    @include flex;
+    
+    @include tablets {
+        width: 100%;
+        order: 3;
+    }
 }
 
-
-// .slider__controls {
-//     width: 50%;
-//     height: 25%;
-//     display: flex;
-//     background: blue;
-
-//     @include tablets {
-//         width: 100%;
-//         order: 3;
-//     }
-// }
-
-.controls__left,
-.controls__right {
+.slider__control {
+    @include flex();
     width: 50%;
     height: 100%;
+    background: $dark-beige;
     position: relative;
-    background-color: $grey;
+    &:first-child {
+        border-right: 1px solid rgba($white, .5);
+    }
 }
 
-.controls__caption {
+
+.slider-img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider__tint {
     position: absolute;
     top: 0;
     left: 0;
@@ -148,14 +133,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba($light-grey, .5);
-    transition: background-color .8s;
+    background-color: rgba(136, 131, 114, 0.5);
+    transition: .8s;
     cursor: pointer;
 
     &:hover {
         background-color: transparent;
     }
 }
+
+.slider__icon {
+    width: 45px;
+    height: 30px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @include flex();
+}
+
+.slider-arrow__svg {
+    fill: $white;
+    width: 100%;
+}
+
 
 .controls__icon {
     width: 45px;
