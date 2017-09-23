@@ -1,0 +1,62 @@
+section.mentions
+    .mentions__content
+        .mentions__header
+            .strokes-title.strokes-title--big Что обо мне
+            .strokes-title.strokes-title--big.strokes-title--pure говорят
+            .strokes-title__bg.strokes-title__bg-mentions
+                +icon('icon-llgrey', 'about_header')                
+
+
+        .mentions__opinions
+            ul.mentions__list
+                li.mentions__item
+                    .mention
+                        .mention__quote
+                            .mention__icon
+                                +icon('quote','quote')
+                        .mention__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! Два месяца только самых тяжелых испытаний и бессонных ночей!
+                        .mention__mentor
+                            .mentor
+                                .mentor__photo
+                                    img.responsive-img(src='assets/images/photos/mentor-1.jpg')
+                                .mentor__desc 
+                                    .mentor__name Ковальчук Дмитрий
+                                    .mentor__position основатель LoftSchool
+                li.mentions__item
+                    .mention
+                        .mention__quote
+                            .mention__icon
+                                +icon('quote','quote')
+                        .mention__text Этот код выдержит любые испытания. Только, пожалуйста, не запускайте сайт на слишком старых браузерах!
+                        .mention__mentor
+                            .mentor
+                                .mentor__photo
+                                    img.responsive-img(src='assets/images/photos/mentor-2.jpg')
+                                .mentor__desc 
+                                    .mentor__name Сабанцев Владимир
+                                    .mentor__position преподаватель 
+        
+        .mentions__feedback
+            .feedback
+                .feedback__wrapper
+                    svg(xmlns='http://www.w3.org/2000/svg', version='1.1', style='display: none')
+                        defs
+                            filter#blur
+                                fegaussianblur(in='SourceGraphic', stddeviation='10,10')
+
+                    .feedback__header
+                        .strokes-title Связаться со мной
+
+                    .feedback__form
+                        form(id='feedback-form', class='form')
+                            input(type='text', id='name', placeholder='Имя', class='form__input')
+                            input(type='enail', id='email', placeholder='Email', class='form__input')
+                            textarea(id='message', rows='3', class='form__input', placeholder='Ваше сообщение')
+                .feedback__buttons
+                    button(form='feedback-form', type='submit', class='btn btn-feedback') Отправить
+                    button(form='feedback-form', type='reset', class='btn btn-feedback') Очистить
+
+        .mentions__scroll.scroll
+            a.scroll__link(href='#')
+                .scroll__icon
+                    +icon('icon-white', 'portf_arrow_up')  

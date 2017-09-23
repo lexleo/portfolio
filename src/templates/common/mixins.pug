@@ -1,3 +1,17 @@
 mixin icon(className, name)
-  svg(class=className)
+  svg(class='icon ' + className)
     use(id=name xlink:href='./assets/images/icons/sprite.svg#' + name)
+
+mixin strokes-title(text, fontSize, strokes, color)
+  - var fontSize = rem(fontSize) + 'px' || rem(35px)
+  - var strokes = strokes || true
+  - var color = color || $grey
+  - var classList = 'strokes-title'
+  
+  if strokes == false
+    classList += ' strokes-title--pure'
+  
+  if (color == black)
+    classList += ' strokes-title--black'
+  
+  div(class=classList) text

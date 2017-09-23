@@ -16,6 +16,8 @@ const svgSprite = require('gulp-svg-sprite'),
 const sass = require('gulp-sass'),
       sourcemaps = require('gulp-sourcemaps'),
       sassLint = require('gulp-sass-lint');
+      cssunit = require('gulp-css-unit'),
+      autoprefixer = require('gulp-autoprefixer');
 
 // scripts
 const gulpWebpack = require('gulp-webpack'),
@@ -57,6 +59,7 @@ const paths = {
 // pug
 function templates() {
     return gulp.src(paths.templates.pages)
+        .pipe(plumber())
         .pipe(pug({ pretty: true }))
         .pipe(gulp.dest(paths.root));
 }
@@ -65,9 +68,17 @@ function templates() {
 // scss
 function styles() {
     return gulp.src(paths.styles.css)
-        .pipe(plumber())
+        // .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(cssunit({
+            type: 'px-to-rem',
+            rootSize: 16
+        }))
         .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.styles.dest))

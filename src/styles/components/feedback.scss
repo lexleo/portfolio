@@ -1,0 +1,88 @@
+.feedback {
+    max-width: 380px;
+    background: inherit;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+        background: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        filter: url(#blur);
+    }
+}
+
+.feedback__wrapper {
+    padding: 35px 20px 0;
+    position: relative;
+}
+
+.feedback__header {
+    margin-bottom: 35px;
+    @include flex();
+
+    @include tablets {
+        margin-bottom: 15px;
+    }
+}
+
+.form__input {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: 0;
+    resize: vertical;
+    max-height: 300px;
+    @include roboto();
+
+    &:placeholder {
+        color: rgba($grey, .5);
+    }
+}
+
+.feedback__buttons {
+    display: flex;
+    position: relative;
+}
+
+.btn-feedback {
+    @include roboto(medium);
+    width: 50%;
+    background-color: rgba($green, .8);
+    font-weight: 500;
+    color: $white;
+    border: 0;
+    border-radius: 0;
+    border-right: solid 2px rgba($white, .5);
+    padding: 14px 30px;
+    transition: .3s;
+
+    &:hover {
+        background-color: $dark-green;
+    }
+
+    &:last-child {
+        border-right: 0;
+    }
+}
+
+.scroll__link {
+    z-index: 1;
+}
+
+.scroll__icon {
+    width: 26px;
+    height: 16px;
+    opacity: .7;
+
+    &:hover {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,201 @@
+.mentions {
+    padding: 35px 20px 0;
+    background: url('../images/bg/mentions-bg.jpg') center top;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+    @include tablets {
+        font-size: 14px;
+    }
+
+    @include phones {
+        padding: 35px 10px 0;
+    }
+}
+
+.mentions__header {
+    @include flex(column);
+    position: relative;
+}
+
+.strokes-title__bg-mentions {
+    margin-top: -20px;
+}
+
+.mentions__content {
+    background: inherit;
+
+    &::after {
+        content: '';
+        display: block;
+        margin-bottom: 150px;
+        height: 1px;
+    }
+
+    @include tablets {
+
+        &::after {
+            margin-bottom: 235px;
+        }
+    }
+
+    @include phones {
+
+        &::after {
+            margin-bottom: 245px;
+        }
+    }
+}
+
+.mentions__title-wrapper {
+    @include flex();
+}
+
+.mentions__list {
+    display: flex;
+
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.mentions__item {
+    margin-right: 20px;
+
+    &:nth-child(even) {
+        margin-right: 0;
+    }
+
+    @include phones {
+        margin: 0 0 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.mention__quote {
+    margin-bottom: 25px;
+    display: flex;
+
+    @include tablets {
+        margin-bottom: 15px;
+    }
+
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.mention__icon {
+    width: 34px;
+    height: 30px;
+    opacity: .2;
+}
+
+.mentions__header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 55px;
+
+    @include tablets {
+        margin-bottom: 35px;
+    }
+}
+
+.mentions__opinions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 70px;
+
+    @include tablets {
+        margin-bottom: 50px;
+    }
+
+    @include phones {
+        margin-bottom: 30px;
+    }
+}
+
+.mentions__feedback {
+    display: flex;
+    background: inherit;
+    margin-bottom: 70px;
+
+    @include tablets {
+        margin-bottom: 100px;
+    }
+
+    @include phones {
+        margin-bottom: 50px;
+    }
+}
+
+.mentions__scroll {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+
+    @include tablets {
+        margin-bottom: 50px;
+    }
+
+    @include phones {
+        margin-bottom: 40px;
+    }
+}
+
+.mention {
+    max-width: 380px;
+}
+
+.mention__text {
+    @include roboto();
+    font-size: 16px;
+    margin-bottom: 25px;
+
+    @include tablets {
+        margin-bottom: 15px;
+    }
+}
+
+.mentor {
+    display: flex;
+}
+
+.mentor__photo {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    margin-right: 20px;
+    flex-shrink: 0;
+
+    @include phones {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.mentor__desc {
+    color: $grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mentor__name {
+    @include roboto(bold);
+    color: $green;
+}
+
+.mentor__position {
+    @include roboto();
+    color: $green;
+}

@@ -18,12 +18,15 @@ block content
                         polygon(class = "triangle-white" points="1000,0   1000,86   500,86   500,75.5")
 
             .works__header
-                .strokes-title.strokes-title--works Мои работы
-                .header__content-bg
+                .strokes-title.strokes-title--big Мои работы
+                .strokes-title__bg.strokes-title__bg-works
                     +icon('works-header__svg', 'works_header')
 
             
         include ../components/slider.pug
 
+        include ../components/mentions.pug
+
+    include ../components/footer.pug
     
     

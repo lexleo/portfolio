@@ -11,6 +11,7 @@
     position: relative;
     line-height: 1.3;
     text-align: center;
+    max-width: 450px;
     &:before {
         content: "";
         display: block;
@@ -35,15 +36,30 @@
     }    
 }
 
+.strokes-title--big {
+    font-size: 63px;
+    z-index: 100;
+}
+
 .strokes-title--black {
     color: $black;
 }
 
-.strokes-title-pure {
+.strokes-title--pure {
     &:after {
         display: none;
     }
     &:before {
         display: none;
     }
+}
+
+.strokes-title__bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 10;
+    opacity: .5;        
 }
