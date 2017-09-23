@@ -4,5 +4,39 @@ block variables
     - var title = "Блог"
 
 block content
-    .welcome-container
-        h1.section__title Блог
+    .page-container
+        include ../components/header-blog.pug
+
+        section.blog
+
+            .triangles
+                .triangle-wrapper.triangle-wrapper--left
+                    svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 85" preserveaspectratio="none" class="triangle")
+                        polygon(class = "triangle-white" points="0,0   0,86   500.8,86   500.8,75.5")
+                .triangle-wrapper.triangle-wrapper--right
+                    svg(xmlns="http://www.w3.org/2000/svg" viewbox="500 0 500 85" preserveaspectratio="none" class="triangle")
+                        polygon(class = "triangle-white" points="1000,0   1000,86   500,86   500,75.5")
+
+
+            .blog__left
+                .blog__nav
+                    +articleContents('nav__list_blog', 'nav__link_blog', articles)
+            .blog__right
+                .blog__article
+                    +article('Самое важное в Sass', '03 августа 2017')
+                    .blog__article-content
+                        include:markdown-it ../../articles/about-sass.md
+                .blog__article
+                    +article('Лучшие практики верстки', '14 июня 2017')
+                    .blog__article-content
+                        include:markdown-it ../../articles/best-practics.md
+                .blog__article
+                    +article('Самый необходимый набор Gulp-плагинов', '02 июня 2017')
+                    .blog__article-content
+                        include:markdown-it ../../articles/gulp-plugins.md
+                .blog__article
+                    +article('Почему я выбрал Pug', '14 мая 2017')
+                    .blog__article-content
+                        include:markdown-it ../../articles/why-pug.md
+    
+    include ../components/footer.pug

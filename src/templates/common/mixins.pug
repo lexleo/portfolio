@@ -14,4 +14,17 @@ mixin strokes-title(text, fontSize, strokes, color)
   if (color == black)
     classList += ' strokes-title--black'
   
-  div(class=classList) text
+  div(class=classList)= text
+
+
+mixin articleContents (listModifier, linkModifier, items, itemsMax)
+  - itemsMax = itemsMax || 0
+  - itemsLen = items.length > itemsMax ? items.length : itemsMax
+  ul(class='nav__list '+listModifier)
+    - for (i=0; i<itemsLen; i++)
+        li.nav__item
+            a(href= items[i].href class='nav__link ' + linkModifier)= items[i].name
+
+mixin article(articleHeader, articleDate)
+    .blog__article-header= articleHeader
+    .blog__article-date= articleDate

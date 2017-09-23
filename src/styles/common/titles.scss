@@ -63,3 +63,21 @@
     z-index: 10;
     opacity: .5;        
 }
+
+.strokes-title__bg--white {
+    width: 300%;
+    height: 200px;
+    margin-top: 25px;
+    opacity: .25;
+}
+
+.strokes-title--white {
+    font-size: 63px;
+    color: $white;
+    margin-bottom: 0;
+    &:before {
+        background: rgba($white, .2);
+    }
+    &:after {
+        background: rgba($white, .2);    }     
+}
