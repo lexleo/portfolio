@@ -20,6 +20,9 @@ $phones: 480px;
 // Normalize
 @import 'layout/normalize.min';
 
+//Hamburgers
+@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+
 // Layout
 @import 'layout/mixins';
 @import 'layout/media';
@@ -29,6 +32,7 @@ $phones: 480px;
 // Commons
 @import 'common/titles';
 @import 'common/icons';
+@import 'common/flipper';
 
 // Components
 @import 'components/menu';
@@ -44,6 +48,7 @@ $phones: 480px;
 @import 'components/slider';
 @import 'components/mentions';
 @import 'components/feedback';
+@import 'components/fs-menu';
 
 
 

@@ -19,12 +19,19 @@
 .header__content {
     @include flex(column);
     position: relative;
+    width: 80%;
+    height: 90%;
+}
+
+.header__icon-wrapper {
+    display: flex;
+    width: 50%;
+    border: 1px solid aquamarine;
 }
 
 .header__svg {
     fill: rgba($white, .06);
-    width: rem(1150px);
-    height: rem(430px);
+    width: 100%;
     padding-bottom: rem(50px);
 }
 
@@ -132,4 +139,23 @@
     width: rem(25px);
     height: rem(25px);
     fill: $white;
+}
+
+.hamburger {
+    position: absolute;
+    top: 0;
+    right: 1%;
+    outline: none;
+    opacity: .7;
+    z-index: 10000;
+    transition: .3s;
+    &:hover {
+        opacity: 1;
+    }
+    .hamburger-box {
+        color: $white;
+        .hamburger-inner {
+            color: $white;
+        }
+    }   
 }

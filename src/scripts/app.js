@@ -1,3 +1,4 @@
 const welcome = require('./pages/welcome');
 const skills = require('./common/skills');
-// const map = require('./common/map');
+const fsMenu = require('./common/fs-menu');
+const map = require('./common/map');

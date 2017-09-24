@@ -9,7 +9,7 @@ const config = {
   plugins: [
     new UglifyJSPlugin({
       sourceMap: true
-    })
+    }) 
   ],
   module: {
     rules: [
@@ -17,7 +17,7 @@ const config = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader']
-      }
+      },
     ]
   }
 };

@@ -15,11 +15,16 @@ header.header
         li.socials__item.socials__item--header
             a.social__link(href="")
                 +icon("socials__svg socials__svg--header", "linked_in")
-    .hamburger
-        a.hamburger__link(href="")
-            +icon("hamburger__svg", "hamburger")
+
     .next-screen
         a.next-screen__link(href="")
             +icon("next-screen__svg", "arrow_down")
 
-            
+    button(class="hamburger hamburger--squeeze" type="button")
+        span(class="hamburger-box")
+            span(class="hamburger-inner")
+
+    include ../components/fs-menu.pug
+
+    
+

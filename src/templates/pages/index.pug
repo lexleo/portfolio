@@ -6,6 +6,13 @@ block variables
 block content
     .welcome-container
         .login-button Авторизоваться
-        include ../components/menu.pug
-        include ../components/auth.pug
+
+        .flip-container
+            .flipper
+                .front
+                    include ../components/menu.pug
+                .back
+                    include ../components/auth.pug
+
+
         .credits © Алексей Шилякин | создано в LoftSchool | 2017

@@ -1,5 +1,6 @@
 .menu {
     @include flex(column);
+    width: 380px;
 }
 
 .menu__wrapper {

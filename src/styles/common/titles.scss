@@ -75,9 +75,13 @@
     font-size: 63px;
     color: $white;
     margin-bottom: 0;
+    
     &:before {
         background: rgba($white, .2);
+        transition: .15s;        
     }
     &:after {
-        background: rgba($white, .2);    }     
+        background: rgba($white, .2);
+        transition: .15s;                     
+    }
 }
