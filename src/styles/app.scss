@@ -21,7 +21,7 @@ $phones: 480px;
 @import 'layout/normalize.min';
 
 //Hamburgers
-@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+@import "hamburgers/hamburgers.scss";
 
 // Layout
 @import 'layout/mixins';
@@ -57,4 +57,3 @@ $phones: 480px;
 @import 'pages/works';
 @import 'pages/about';
 @import 'pages/blog';
-
