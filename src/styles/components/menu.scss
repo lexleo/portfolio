@@ -18,6 +18,12 @@
     width: rem(147px);
     height: rem(147px);
     border-radius: 50%;
+    @include tablets {
+        background-position-x: -8px;
+    }    
+    @include phones {
+        background-position-x: -20px;
+    }    
 }
 
 .menu__title {
