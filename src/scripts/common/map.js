@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function getTranslateXY() {
     var style = window.getComputedStyle(mapMarker);
     var matrix = new WebKitCSSMatrix(style.webkitTransform);
+    console.log(matrix);
     var translate = {
       x: +matrix.e,
       y: +matrix.f
@@ -43,14 +44,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // move
   link.onmouseover = function(){
     var translate = getTranslateXY();
-    var newStyle = "transform: translate(" + translate.x + "px, " + (translate.y + shift) + "px);";                      
+    var newStyle = "transform: translate(" + translate.x + "px, " + (translate.y + shift) + "px);";
     mapMarker.style = newStyle;
+    console.log(mapMarker);
   };
 
   // move back
   link.onmouseleave = function(){
     var translate = getTranslateXY();
-    var oldStyle = "transform: translate(" + translate.x + "px, " + (translate.y - shift) + "px);";                      
+    var oldStyle = "transform: translate(" + translate.x + "px, " + (translate.y - shift) + "px);";
     mapMarker.style = oldStyle;
   };
 
