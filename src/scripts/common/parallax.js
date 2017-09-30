@@ -1,34 +1,33 @@
-if (window.location.href.endsWith('index.html')) {
-
 document.addEventListener("DOMContentLoaded", function(event) { 
 
-  var parallaxContainer = document.getElementById('parallax'),
-    layers = parallaxContainer.children;
+  var parallaxContainer = document.getElementById('parallax');
 
-  var moveLayers = function (e) {
-    var initialX = (window.innerWidth / 2) - e.pageX;
-    var initialY = (window.innerHeight / 2) - e.pageY;
+  if (parallaxContainer) {
 
-    [].slice.call(layers).forEach(function(layer, index) {
-      var 
-        divider = index / 75,
-        positionX = initialX * divider,
-        positionY = initialY * divider,
-        bottomPosition = (window.innerHeight / 2) * divider,
-        transformString = 'translate(' + positionX + 'px,' + positionY + 'px)',
-        image = layer.firstElementChild;
+    var layers = parallaxContainer.children;
 
-      layer.style.transform = transformString;
-      image.style.bottom = '-' + bottomPosition + 'px';
-    });
+    var moveLayers = function (e) {
+      var initialX = (window.innerWidth / 2) - e.pageX;
+      var initialY = (window.innerHeight / 2) - e.pageY;
 
-  };
+      [].slice.call(layers).forEach(function(layer, index) {
+        var 
+          divider = index / 75,
+          positionX = initialX * divider,
+          positionY = initialY * divider,
+          bottomPosition = (window.innerHeight / 2) * divider,
+          transformString = 'translate(' + positionX + 'px,' + positionY + 'px)',
+          image = layer.firstElementChild;
 
-  window.addEventListener('mousemove', moveLayers);
+        layer.style.transform = transformString;
+        image.style.bottom = '-' + bottomPosition + 'px';
+      });
+
+    };
+
+    window.addEventListener('mousemove', moveLayers);
+
+
+  }
 
 });
-
-
-
-
-}
