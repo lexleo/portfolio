@@ -30,6 +30,10 @@
   &:active {
     border-color: $light-light-grey;
   }
+  @include phones {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .credits {
