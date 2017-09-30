@@ -1,8 +1,5 @@
 if (window.location.href.endsWith('about.html')) {
 
-  // :hover to animate marker
-  document.addEventListener("DOMContentLoaded", function (event) {
-
 
     // Initialize map
     var map = new mapboxgl.Map({
@@ -26,6 +23,9 @@ if (window.location.href.endsWith('about.html')) {
       .setLngLat([38.97470441664118, 45.052998577867044])
       .addTo(map);
 
+  // :hover to animate marker
+  document.addEventListener("DOMContentLoaded", function (event) {
+
     var link = document.querySelector('.contacts__link-map');
     var mapMarker = document.querySelector('.map-marker');
 
@@ -33,7 +33,6 @@ if (window.location.href.endsWith('about.html')) {
     function getTranslateXY() {
       var style = window.getComputedStyle(mapMarker);
       var matrix = new WebKitCSSMatrix(style.webkitTransform);
-      console.log(matrix);
       var translate = {
         x: +matrix.e,
         y: +matrix.f
@@ -49,7 +48,6 @@ if (window.location.href.endsWith('about.html')) {
       var translate = getTranslateXY();
       var newStyle = "transform: translate(" + translate.x + "px, " + (translate.y + shift) + "px);";
       mapMarker.style = newStyle;
-      console.log(mapMarker);
     };
 
     // move back
