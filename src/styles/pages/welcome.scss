@@ -4,7 +4,7 @@
   width: 100vw;
   height: 100vh;
   @include flex(column);
-  background: url('../images/bg/mountains.jpg') center center no-repeat;
+  // background: url('../images/bg/mountains.jpg') center center no-repeat;
   background-size: cover;
 }
 

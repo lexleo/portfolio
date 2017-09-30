@@ -1,11 +1,12 @@
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000px;
+	position: absolute;
 }
 
 
 .flip-container, .front, .back {
-	width: 320px;
+	width: 380px;
 	height: 480px;
 }
 
