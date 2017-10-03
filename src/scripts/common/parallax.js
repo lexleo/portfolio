@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     window.addEventListener('mousemove', moveLayers);
 
-
   }
 
 });
