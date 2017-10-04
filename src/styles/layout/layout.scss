@@ -21,14 +21,17 @@ body {
   line-height: 1.42;
   position: relative;
   color: $black;
-  -webkit-font-smoothing: antialiased;  
+  -webkit-font-smoothing: antialiased;
+  // min-width: 420px;
+  // overflow: hidden;
 }
 
 .wrapper {
   position: relative;
   width: 100%;
   min-height: 100%;
-  overflow: hidden; 
+  overflow: hidden;
+  min-width: 400px;
 }
 
 .page-container {

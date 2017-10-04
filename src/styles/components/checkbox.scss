@@ -31,6 +31,7 @@
 .control2:hover input ~ .control2_indicator,
 .control2 input:focus ~ .control2_indicator {
     background: #f0efe9;
+    border-color: rgba($green, .5);
 }
 
 .control2 input:checked ~ .control2_indicator {

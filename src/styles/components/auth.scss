@@ -34,9 +34,8 @@
 .auth__input {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    border: none;
+    border: solid 1px transparent;
     background: $white;
-    outline: none;
     color: $grey;
     height: rem(44px);
     width: rem(298px);
@@ -45,6 +44,10 @@
     padding-left: rem(20px);
     @include placeholder {
         color: $light-light-grey;
+    }
+    &:focus {
+        outline: none;  
+        border-color: rgba($green, .5);
     }
 }
 
@@ -90,4 +93,20 @@
 
 .checked {
     color: $green !important;
+}
+
+.buttons__link-left {
+    outline: none;
+    border-bottom-left-radius: 5px;        
+    &:focus {
+        border: 2px solid rgba($dark-green, .7);
+    }
+}
+
+.buttons__link-right {
+    outline: none;
+    border-bottom-right-radius: 5px;        
+    &:focus {
+        border: 2px solid rgba($dark-green, .7);
+    }
 }

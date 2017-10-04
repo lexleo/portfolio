@@ -5,20 +5,22 @@
         h3.menu__subtitle Личный сайт веб-разработчика
         ul.socials__list
             li.socials__item
-                a.social__link(href="https://vk.com/peavey")
+                a.socials__link(href="https://vk.com/peavey" tabindex="2")
                     +icon('socials__svg', 'vk')
             li.socials__item
-                a.social__link(href="https://github.com/lexleo")
+                a.socials__link(href="https://github.com/lexleo" tabindex="3")
                     +icon("socials__svg", "github")
             li.socials__item
-                a.social__link(href="")
+                a.socials__link(href="" tabindex="4")
                     +icon("socials__svg", "linked_in")
     ul.buttons__list
         li.buttons__item
-            a.buttons__link(href="works.html") Мои работы
+            a.buttons__link.link-left(href="works.html" tabindex="5") Мои работы
         li.buttons__item
-            a.buttons__link(href="about.html") Обо мне
+            a.buttons__link(href="about.html" tabindex="6") Обо мне
         li.buttons__item
-            a.buttons__link(href="blog.html") Блог
+            a.buttons__link.link-right(href="blog.html" tabindex="7") Блог
+                
+
 
 
