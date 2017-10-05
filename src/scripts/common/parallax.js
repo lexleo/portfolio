@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var parallaxContainer = document.getElementById('parallax');
   var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
-  alert(width);
   if(width < 480) {
     parallaxContainer.style.display = "none";
   }

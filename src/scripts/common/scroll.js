@@ -1,6 +1,5 @@
 function smoothScrollTo(element, duration) {
-    /* checking type of element. If it's a string select this element by class name, else work whith html element */
-    /* in other words we can pass in function class name or html element*/
+
     var targetBlock =
         typeof element === 'string' ?
         document.querySelector('.' + element) :

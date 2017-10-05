@@ -98,7 +98,6 @@
     }
 }
 
-
 .nav__link_blog {
     text-align: right;
     color: $grey;
@@ -113,6 +112,10 @@
         @include roboto(bold);
         border-color: $green;
     }
+}
+
+.nav__link_blog--active {
+    border-color: $green;    
 }
 
 .nav__link {
