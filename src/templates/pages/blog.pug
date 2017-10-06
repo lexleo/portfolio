@@ -23,21 +23,20 @@ block content
                     +articleContents('nav__list_blog', 'nav__link_blog', articles)
             .blog__right
                 .blog__article
-                    +article('Самое важное в Sass', '03 августа 2017', 'article1')
+                    +article('Самое важное в Sass', '03 августа 2017', 0)
                     .blog__article-content
                         include:markdown-it ../../articles/about-sass.md
                 .blog__article
-                    +article('Лучшие практики верстки', '14 июня 2017', 'article2')
+                    +article('Лучшие практики верстки', '14 июня 2017', 1)
                     .blog__article-content
                         include:markdown-it ../../articles/best-practics.md
                 .blog__article
-                    +article('Самый необходимый набор Gulp-плагинов', '02 июня 2017', 'article3')
+                    +article('Самый необходимый набор Gulp-плагинов', '02 июня 2017', 2)
                     .blog__article-content
                         include:markdown-it ../../articles/gulp-plugins.md
                 .blog__article
-                    a(name="#article4")
-                    +article('Почему я выбрал Pug', '14 мая 2017', 'article4')
-                    .blog__article-content#gohere
+                    +article('Почему я выбрал Pug', '14 мая 2017', 3)
+                    .blog__article-content
                         include:markdown-it ../../articles/why-pug.md
     
     include ../components/footer.pug

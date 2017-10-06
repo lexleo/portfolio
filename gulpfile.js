@@ -59,7 +59,7 @@ const paths = {
 // pug
 function templates() {
     return gulp.src(paths.templates.pages)
-        .pipe(plumber())
+        // .pipe(plumber())
         .pipe(pug({ pretty: true }))
         .pipe(gulp.dest(paths.root));
 }
@@ -68,7 +68,7 @@ function templates() {
 // scss
 function styles() {
     return gulp.src(paths.styles.css)
-        // .pipe(plumber())
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(autoprefixer({

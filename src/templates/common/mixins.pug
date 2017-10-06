@@ -23,8 +23,8 @@ mixin articleContents (listModifier, linkModifier, items, itemsMax)
   ul(class='nav__list '+listModifier)
     - for (i=0; i<itemsLen; i++)
         li.nav__item
-            a(href= items[i].href class='nav__link ' + linkModifier)= items[i].name
+            a(href="" class='nav__link ' + linkModifier data-article='' +i)= items[i].name
 
-mixin article(articleHeader, articleDate, articleId)
-      h2(class=blog__article-header id=articleId)= articleHeader
+mixin article(articleHeader, articleDate, dataArticle)
+      h2(class='blog__article-header' data-article= '' +dataArticle)= articleHeader
       .blog__article-date= articleDate

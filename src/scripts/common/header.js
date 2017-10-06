@@ -3,7 +3,6 @@ import { smoothScrollTo } from './scroll';
 document.addEventListener("DOMContentLoaded", function (event) {
 
     var link = document.querySelector('.next-screen');
-    console.log(link);
     if (link) {
         link.addEventListener('click', function(e) {
             e.preventDefault();
