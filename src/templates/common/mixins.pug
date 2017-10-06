@@ -22,9 +22,9 @@ mixin articleContents (listModifier, linkModifier, items, itemsMax)
   - itemsLen = items.length > itemsMax ? items.length : itemsMax
   ul(class='nav__list '+listModifier)
     - for (i=0; i<itemsLen; i++)
-        li.nav__item
-            a(href="" class='nav__link ' + linkModifier data-article='' +i)= items[i].name
+        li(class='nav__item' data-article='' +i)
+            a(href="" class='nav__link ' + linkModifier)= items[i].name
 
-mixin article(articleHeader, articleDate, dataArticle)
-      h2(class='blog__article-header' data-article= '' +dataArticle)= articleHeader
+mixin article(articleHeader, articleDate)
+      h2(class='blog__article-header')= articleHeader
       .blog__article-date= articleDate

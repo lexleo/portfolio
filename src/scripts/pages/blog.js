@@ -1,8 +1,8 @@
 import { smoothScrollTo } from '../common/scroll';
 
 /* getting links and articles arrays */
-var blogLinks = [].slice.call(document.querySelectorAll('.nav__link_blog'));
-var postItems = [].slice.call(document.querySelectorAll('.blog__article-header'));
+var blogLinks = [].slice.call(document.querySelectorAll('.nav__item'));
+var postItems = [].slice.call(document.querySelectorAll('.blog__article'));
 
 console.log(blogLinks);
 console.log(postItems);
@@ -21,10 +21,10 @@ blogLinks.forEach(function(element) {
         smoothScrollTo(targetBlogArticle, 200);
 
         /* Removing active class from all menu item elements. After add active class to click target element */
-        [].slice.call(document.querySelectorAll('.nav-link__blog')).forEach(function(el) {
-            el.classList.remove('nav-link__blog--active');
+        [].slice.call(document.querySelectorAll('.nav__item')).forEach(function(el) {
+            el.classList.remove('nav__item--active');
         })
-        e.target.parentNode.classList.add('nav-link__blog--active');
+        e.target.parentNode.classList.add('nav__item--active');
     });
 });
 
@@ -40,15 +40,7 @@ document.addEventListener('scroll', function() {
     if (endPoint - window.pageYOffset <= 50) {
         blogMenu.classList.add('blog__nav--fixed');
 
-        if (window.innerWidth > 768) {
-            blogMenu.style.width = '30%';
-        }
     } else {
         blogMenu.classList.remove('blog__nav--fixed');
     }
-})
-
-/* slide menu in visible area on tablets and mobile phones*/
-blogMenu.addEventListener('click', function() {
-    toggleClass('blog-menu', 'active');
-})
+});

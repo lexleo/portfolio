@@ -26,6 +26,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: bottom;
+    padding-right: 0;
 }
 
 .blog__nav--fixed {
@@ -35,6 +36,7 @@
     top: 50px;
     transform: translateX(-100%);
     padding-right: 30px;
+    max-width: 300px;    
 }
 
 .blog__right {
@@ -119,7 +121,6 @@
     &:hover {
         color: $green;
         @include roboto(bold);
-        border-color: $green;
     }
 }
 
@@ -131,4 +132,11 @@
     @include roboto();
     text-decoration: none;
     color: $grey;
+}
+
+.nav__item--active {
+    .nav__link_blog {
+        color: $green;
+        border-right: solid 3px $green;            
+    }
 }
