@@ -1,17 +1,8 @@
 import { smoothScrollTo } from '../common/scroll';
 
-/* getting links and articles arrays */
 var blogLinks = [].slice.call(document.querySelectorAll('.nav__item'));
 var postItems = [].slice.call(document.querySelectorAll('.blog__article'));
 
-console.log(blogLinks);
-console.log(postItems);
-
-/* for every link we: 
-1) prevent default action;
-2) find equal link and post data-article atributes and scroll to that article;
-3) then remov active class from previus blog item and add to current;
- */
 blogLinks.forEach(function(element) {
     element.addEventListener('click', function(e) {
         e.preventDefault();
@@ -20,7 +11,6 @@ blogLinks.forEach(function(element) {
         })
         smoothScrollTo(targetBlogArticle, 200);
 
-        /* Removing active class from all menu item elements. After add active class to click target element */
         [].slice.call(document.querySelectorAll('.nav__item')).forEach(function(el) {
             el.classList.remove('nav__item--active');
         })
@@ -32,10 +22,10 @@ blogLinks.forEach(function(element) {
 var blogMenu = document.querySelector('.blog__nav');
 var endPoint = blogMenu.getBoundingClientRect().top + window.pageYOffset;
 
-/* doesnt work when i'll try to substitute this value in if statament on 51 line*/
+
 var startPoint = window.pageYOffset;
 
-/* on scroll event checking window.pageYOffset position and fix menu block, when it value near 0 */
+
 document.addEventListener('scroll', function() {
     if (endPoint - window.pageYOffset <= 50) {
         blogMenu.classList.add('blog__nav--fixed');
@@ -44,3 +34,26 @@ document.addEventListener('scroll', function() {
         blogMenu.classList.remove('blog__nav--fixed');
     }
 });
+
+
+var highlightNavMenu = function () {
+    var articles = document.querySelectorAll('.blog__article');
+    var article = {};
+    var i = 0;
+
+    window.addEventListener('scroll', function () {
+        [].forEach.call(articles, function (e) {
+            article[e.getAttribute('data-article')] = {
+                height: e.offsetHeight,
+                position: e.getBoundingClientRect().top,
+            };
+        });
+        for (i in article) {
+            if (article[i].position <= 250 && article[i].position >= -article[i].height){
+                if(document.querySelector('.nav__item--active'))
+                    document.querySelector('.nav__item--active').classList.remove('nav__item--active');
+                document.querySelector('.nav__item[data-article="'+ i + '"]').classList.add('nav__item--active');
+            } 
+        }
+    });
+}();
