@@ -24,11 +24,16 @@
             .slider__tint
                 .slider__icon
                     +icon('slider-arrow__svg', 'portf_arrow_down')        
-
-            img.slider-img(src='assets/images/works/work-2.jpg')        
+            .slides#slides-left
+                img.slider-img(src='assets/images/works/work-1.jpg')        
+                img.slider-img(src='assets/images/works/work-2.jpg')        
+                img.slider-img(src='assets/images/works/work-3.jpg')        
+        
         .slider__control
             .slider__tint
                 .slider__icon
                     +icon('slider-arrow__svg', 'portf_arrow_up')
-
-            img.slider-img(src='assets/images/works/work-3.jpg')
+            .slides#slides-right
+                img.slider-img(src='assets/images/works/work-1.jpg')
+                img.slider-img(src='assets/images/works/work-2.jpg')
+                img.slider-img(src='assets/images/works/work-3.jpg')
