@@ -111,7 +111,7 @@
     height: 100%;
     background: $dark-beige;
     position: relative;
-    // overflow: hidden;
+    overflow: hidden;
     &:first-child {
         border-right: 1px solid rgba($white, .5);
     }
@@ -141,6 +141,7 @@
     background-color: rgba(136, 131, 114, 0.5);
     transition: .8s;
     cursor: pointer;
+    z-index: 1;
 
     &:hover {
         background-color: transparent;
@@ -151,7 +152,7 @@
     width: 45px;
     height: 30px;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -188,18 +189,26 @@
 }
 
 .slides {
-    @include flex(column);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // bottom: 0;
+    // right: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    transform: translateY(0%);
+    z-index: 0;
+    min-width: 310px;
+    transition: .3s;
 }
 
+#slides-left {
+    transform: translateY(-100%);       
+}
 
+#slides-right {
+    transform: translateY(-200%);       
+}
