@@ -34,6 +34,7 @@ $phones: 480px;
 @import 'common/icons';
 @import 'common/flipper';
 @import 'common/button-reset';
+@import 'common/hide';
 
 // Components
 @import 'components/menu';
@@ -49,6 +50,7 @@ $phones: 480px;
 @import 'components/mentions';
 @import 'components/feedback';
 @import 'components/fs-menu';
+@import 'components/slide-menu';
 @import 'components/parallax';
 @import 'components/preloader';
 

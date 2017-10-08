@@ -46,6 +46,7 @@
     margin-right: auto;
     @include tablets {
         width: 100%;
+        padding-left: 15px;
     }
 }
 

@@ -7,3 +7,4 @@ const scroll = require('./common/scroll');
 const header = require('./common/header');
 const blog = require('./pages/blog');
 const mentions = require('./pages/mentions');
+const slider = require('./common/slide-menu');
