@@ -3,10 +3,7 @@
         
         .project
 
-            .project__title
-                .strokes-title-2row Сайт школы онлайн 
-                    br
-                    | образования
+            .project__title.strokes-title Сайт школы онлайн-образования
 
             .project__technologies html, css, javascript
 
@@ -25,7 +22,7 @@
     .slider__controls
 
         .slider__control
-            .slider__tint
+            .slider__tint.slider__tint-left
                 .slider__icon#slider-down
                     +icon('slider-arrow__svg', 'portf_arrow_down')        
             .slides#slides-left    
@@ -34,7 +31,7 @@
                 img.slider-img(src='assets/images/works/work-3.jpg')        
         
         .slider__control
-            .slider__tint
+            .slider__tint.slider__tint-right
                 .slider__icon#slider-up
                     +icon('slider-arrow__svg', 'portf_arrow_up')
             .slides#slides-right

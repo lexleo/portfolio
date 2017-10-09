@@ -34,7 +34,7 @@
 
 .project__title {
     margin-bottom: 35px;
-    @include flex(column);
+    // @include flex(column);
 }
 
 .project__technologies {
@@ -99,10 +99,15 @@
     width: 50%;
     height: 25%;    
     @include flex;
+    overflow: hidden;
     
     @include tablets {
         width: 100%;
         order: 3;
+        display: flex;
+        flex-direction: row;
+        align-items: top;
+        justify-content: center;
     }
 }
 
@@ -116,6 +121,12 @@
     user-select: none;
     &:first-child {
         border-right: 1px solid rgba($white, .5);
+    }
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;    
     }
 }
 
@@ -200,15 +211,20 @@
     z-index: 0;
     min-width: 310px;
     transition: .3s;
+    @include tablets() {
+        max-width: 367px;
+        max-height: 207px;
+        min-width: 343px;        
+    }
 }
 
-#slides-left {
-    transform: translateY(-100%);       
-}
+// #slides-left {
+//     transform: translateY(-100%);       
+// }
 
-#slides-right {
-    transform: translateY(-200%);       
-}
+// #slides-right {
+//     transform: translateY(-200%);       
+// }
 
 .slides-horizontal {
     display: flex;

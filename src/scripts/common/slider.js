@@ -1,12 +1,36 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
     var up = document.querySelector('#slider-up'),
-        down = document.querySelector('#slider-down'),
+        down = document.querySelector('#slider-down'),    
+        tintLeft = document.querySelector('.slider__tint-left'),
+        tintRight = document.querySelector('.slider__tint-right'),    
         slidesLeft = document.querySelector('#slides-left'),
         slidesRight = document.querySelector('#slides-right');
-        slidesHor = document.querySelector('.slides-horizontal');
+        slidesHor = document.querySelector('.slides-horizontal'),
+        title = document.querySelector('.project__title'),
+        techs = document.querySelector('.project__technologies');
+        link = document.querySelector('.show-btn');
+        
     
-    const worksNum = 3;
+    const works = [
+        {
+            name: 'Сайт школы онлайн образования',
+            techs: 'HTML, CSS, JS',
+            link: 'https://loftschool.com/'
+        },
+        {
+            name: 'ATMA Yoga',
+            techs: 'HTML, CSS, JS, Vue.js',
+            link: 'atmayoga.ru'
+        },
+        {
+            name: 'T.G.D Дизайн интерьеров',
+            techs: 'HTML, CSS, JS, Python',
+            link: 'http://oneplace.su/'
+        },
+    ]
+
+    const worksNum = works.length;
 
     var mainPos = 1,
         leftPos = 2,
@@ -28,7 +52,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             let translateXMain = 'translateX(' + xMain + '%)';
             slidesLeft.style.transform = translateYLeft;
             slidesRight.style.transform = translateYRight;    
-            slidesHor.style.transform = translateXMain;    
+            slidesHor.style.transform = translateXMain;
+            title.innerText = works[mainPos - 1].name;
+            techs.innerText = works[mainPos - 1].techs;
+            link.href = works[mainPos - 1].link;
         }
     }
 
@@ -49,7 +76,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
             slidesLeft.style.transform = translateYLeft;
             slidesRight.style.transform = translateYRight;
             slidesHor.style.transform = translateXMain;
+            title.innerText = works[mainPos - 1].name;
+            techs.innerText = works[mainPos - 1].techs;
+            link.href = works[mainPos - 1].link;            
         }
+    }
+
+    if (down) {
+        down.addEventListener('click', () => {
+            moveForward();
+        });
+    }
+
+    if (up) {
+        up.addEventListener('click', () => {
+            moveBackward();
+        });
     }
 
     if (down) {
