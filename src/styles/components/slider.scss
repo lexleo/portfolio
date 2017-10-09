@@ -154,7 +154,7 @@
     background-color: rgba(136, 131, 114, 0.5);
     transition: .8s;
     cursor: pointer;
-    z-index: 1;
+    z-index: 10;
 
     &:hover {
         background-color: transparent;
@@ -218,13 +218,13 @@
     }
 }
 
-// #slides-left {
-//     transform: translateY(-100%);       
-// }
+#slides-left {
+    transform: translateY(-100%);       
+}
 
-// #slides-right {
-//     transform: translateY(-200%);       
-// }
+#slides-right {
+    transform: translateY(-200%);       
+}
 
 .slides-horizontal {
     display: flex;

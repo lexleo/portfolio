@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
-    var up = document.querySelector('#slider-up'),
-        down = document.querySelector('#slider-down'),    
-        tintLeft = document.querySelector('.slider__tint-left'),
+ 
+    var tintLeft = document.querySelector('.slider__tint-left'),
         tintRight = document.querySelector('.slider__tint-right'),    
         slidesLeft = document.querySelector('#slides-left'),
         slidesRight = document.querySelector('#slides-right');
@@ -82,26 +81,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     }
 
-    if (down) {
-        down.addEventListener('click', () => {
+    if (tintLeft) {
+        tintLeft.addEventListener('click', () => {
             moveForward();
         });
     }
 
-    if (up) {
-        up.addEventListener('click', () => {
-            moveBackward();
-        });
-    }
-
-    if (down) {
-        down.addEventListener('click', () => {
-            moveForward();
-        });
-    }
-
-    if (up) {
-        up.addEventListener('click', () => {
+    if (tintRight) {
+        tintRight.addEventListener('click', () => {
             moveBackward();
         });
     }
