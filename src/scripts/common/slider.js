@@ -2,34 +2,65 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     var up = document.querySelector('#slider-up'),
         down = document.querySelector('#slider-down'),
-        slidesDown = document.querySelector('#slides-left'),
-        slidesUp = document.querySelector('#slides-right');
+        slidesLeft = document.querySelector('#slides-left'),
+        slidesRight = document.querySelector('#slides-right');
+        slidesHor = document.querySelector('.slides-horizontal');
     
     const worksNum = 3;
 
-    var leftPos = 2,
+    var mainPos = 1,
+        leftPos = 2,
         rightPos = 3;
 
-
-    if (up && down && slidesDown) {
-        down.addEventListener('click', () => {
+    function moveForward() {
+        if(slidesLeft && slidesRight && slidesHor) {
             leftPos++;
+            rightPos++;
+            mainPos++;
             if (leftPos > worksNum) leftPos = 1; 
-            let y = (leftPos - 1) * (-100);
-            let translateY = 'translateY(' + y + '%)';
-            slidesDown.style.transform = translateY;
+            if (rightPos > worksNum) rightPos = 1; 
+            if (mainPos > worksNum) mainPos = 1; 
+            let yLeft = (leftPos - 1) * (-100);
+            let yRight = (rightPos - 1) * (-100);
+            let xMain = (mainPos - 1) * (-100);
+            let translateYLeft = 'translateY(' + yLeft + '%)';
+            let translateYRight = 'translateY(' + yRight + '%)';
+            let translateXMain = 'translateX(' + xMain + '%)';
+            slidesLeft.style.transform = translateYLeft;
+            slidesRight.style.transform = translateYRight;    
+            slidesHor.style.transform = translateXMain;    
+        }
+    }
 
+    function moveBackward() {
+        if (slidesLeft && slidesRight && slidesHor) {
+            rightPos--;
+            leftPos--;
+            mainPos--;
+            if (rightPos == 0) rightPos = worksNum; 
+            if (leftPos == 0) leftPos = worksNum; 
+            if (mainPos == 0) mainPos = worksNum; 
+            let yRight = (rightPos - 1) * (-100);
+            let yLeft = (leftPos - 1) * (-100);
+            let xMain = (mainPos - 1) * (-100);
+            let translateYRight = 'translateY(' + yRight + '%)';
+            let translateYLeft = 'translateY(' + yLeft + '%)';
+            let translateXMain = 'translateX(' + xMain + '%)';
+            slidesLeft.style.transform = translateYLeft;
+            slidesRight.style.transform = translateYRight;
+            slidesHor.style.transform = translateXMain;
+        }
+    }
+
+    if (down) {
+        down.addEventListener('click', () => {
+            moveForward();
         });
     }
 
-    if (up && down && slidesUp) {
+    if (up) {
         up.addEventListener('click', () => {
-            rightPos--;
-            if (rightPos == 0) rightPos = worksNum; 
-            let y = (rightPos - 1) * (-100);
-            let translateY = 'translateY(' + y + '%)';
-            slidesUp.style.transform = translateY;
-
+            moveBackward();
         });
     }
 
