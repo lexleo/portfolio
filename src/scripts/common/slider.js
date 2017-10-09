@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         tintRight = document.querySelector('.slider__tint-right'),    
         slidesLeft = document.querySelector('#slides-left'),
         slidesRight = document.querySelector('#slides-right');
-        slidesHor = document.querySelector('.slides-horizontal'),
+        slidesHor = document.querySelector('.slider__list'),
         title = document.querySelector('.project__title'),
         techs = document.querySelector('.project__technologies');
         link = document.querySelector('.show-btn');
@@ -13,19 +13,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
     
     const works = [
         {
-            name: 'Сайт школы онлайн образования',
+            name: 'Коворкинг «Воркадиум»',
+            techs: 'HTML, CSS',
+            link: 'http://workadium.lexleo.pro/'
+        },
+        {
+            name: 'Mr. Burger',
             techs: 'HTML, CSS, JS',
-            link: 'https://loftschool.com/'
+            link: 'https://lexleo.github.io/mr.burger/'
         },
         {
-            name: 'ATMA Yoga',
-            techs: 'HTML, CSS, JS, Vue.js',
-            link: 'atmayoga.ru'
-        },
-        {
-            name: 'T.G.D Дизайн интерьеров',
+            name: 'Deltaplan.pro',
             techs: 'HTML, CSS, JS, Python',
-            link: 'http://oneplace.su/'
+            link: 'http://deltaplan.pro/'
         },
     ]
 

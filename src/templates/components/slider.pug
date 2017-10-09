@@ -3,21 +3,28 @@
         
         .project
 
-            .project__title.strokes-title Сайт школы онлайн-образования
+            .project__title.strokes-title Коворкинг «Воркадиум»
 
-            .project__technologies html, css, javascript
+            .project__technologies html, css, js
 
-            a.show-btn(href='#')
+            a.show-btn(href='http://workadium.lexleo.pro/')
                 .show-btn__icon
                     +icon('show-btn__svg','link')
                 span Посмотреть сайт
 
 
     .slider__screens
-        .slides-horizontal
-            img.slider-img(src='assets/images/works/work-1.jpg')
-            img.slider-img(src='assets/images/works/work-2.jpg')
-            img.slider-img(src='assets/images/works/work-3.jpg')
+        .slider__wrapper
+            .slider__list
+                .slider__item
+                    .slider__img-wrapper
+                        img.slider-img(src='assets/images/works/work-1.png')
+                .slider__item
+                    .slider__img-wrapper
+                        img.slider-img(src='assets/images/works/work-2.png')
+                .slider__item
+                    .slider__img-wrapper
+                        img.slider-img(src='assets/images/works/work-3.png')
     
     .slider__controls
 
