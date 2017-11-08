@@ -66,17 +66,34 @@ if (window.location.href.endsWith('about.html')) {
 
   document.addEventListener("DOMContentLoaded", function(event) {
     
-    html.draw();
-    css.draw();
-    js.draw();
-    php.draw();
-    node.draw();
-    mysql.draw();
-    git.draw();
-    bower.draw();
-    gulp.draw();
-    mongo.draw();
+    var animationDone = false;
 
+    let height = window.innerHeight
+    || document.documentElement.clientHeight
+    || document.body.clientHeight;
+
+    console.log('windowHeight:'+height);
+
+    window.onscroll = function() {
+      console.log(window.pageYOffset);
+      if (!animationDone && (window.pageYOffset > (height / 2))) {
+          html.draw();
+          css.draw();
+          js.draw();
+          setTimeout(()=>{
+            php.draw();
+            node.draw();
+            mysql.draw();  
+            mongo.draw();            
+          }, 500);
+          setTimeout(()=>{
+            git.draw();
+            bower.draw();
+            gulp.draw();
+          }, 1000);
+          animationDone = true;
+        }
+    }
   });
 
 

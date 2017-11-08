@@ -9,8 +9,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
    
     var flipFlipper = function(e) {
-        e.preventDefault();
+        if (e) {
+            e.preventDefault();
+        }
         flipContainer.classList.toggle("flip");        
+        loginBtn.classList.toggle('hide');
     }
     
     var comeFrom = document.referrer.slice(-10);
@@ -20,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     if (comeFrom !== 'index.html') {
         setTimeout(function(){
-            flipContainer.classList.toggle("flip");    
+            flipFlipper();
         }, 700);
     }
 
