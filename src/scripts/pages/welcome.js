@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (loginBtn) loginBtn.addEventListener('click', flipFlipper);
     if (mainBtn) mainBtn.addEventListener('click', flipFlipper);
 
-    if (comeFrom !== 'index.html') {
+    if ((comeFrom !== 'index.html') && (document.referrer.slice(-4) === 'html')) {
         setTimeout(function(){
             flipFlipper();
         }, 700);
