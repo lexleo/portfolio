@@ -251,6 +251,8 @@
     @include flex();
     overflow: hidden;
     max-width: 1000px;
+    width: 100%;
+    height: 100%;
 }
 
 .slider__list {
