@@ -1,11 +1,14 @@
 if (window.location.href.endsWith('about.html')) {
 
+  alert('eeeeeeeeeeeee');
+
 // Initialize map
 var map = new mapboxgl.Map({
     container: 'map',
     style: './assets/scripts/style.json',
     attributionControl: true,
-    hash: false
+    hash: false,
+    logoPosition: 'top-right',
 });
 
 // Dizable Zoom by scroll
@@ -38,15 +41,28 @@ document.addEventListener("DOMContentLoaded", function(event) {
     return translate;
   }
 
+  function mapAnimate() {
+    console.log('animate');
+    map.easeTo(
+      {
+        "pitch": 49,
+        "duration": 1000
+      }
+    );
+  }
+
+
   // Value move on
   const shift = -15;
   
   // move
   link.onmouseover = function(){
+    alert('wooo');
+    console.log('animate2');    
+    mapAnimate();
     var translate = getTranslateXY();
     var newStyle = "transform: translate(" + translate.x + "px, " + (translate.y + shift) + "px);";
     mapMarker.style = newStyle;
-    console.log(mapMarker);
   };
 
   // move back

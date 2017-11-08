@@ -54,14 +54,14 @@ if (window.location.href.endsWith('about.html')) {
 
   const html = new Skill(150, 150, '#html', 0.75);
   const css = new Skill(150, 150, '#css', 0.65);
-  const js = new Skill(150, 150, '#js', 0.48);
-  const php = new Skill(150, 150, '#php', 0.28);
-  const node = new Skill(150, 150, '#node', 0.38);
-  const mysql = new Skill(150, 150, '#mysql', 0.6);
-  const git = new Skill(150, 150, '#git', 0.4);
-  const bower = new Skill(150, 150, '#bower', 0.1);
-  const gulp = new Skill(150, 150, '#gulp', 0.48);
-  const mongo = new Skill(150, 150, '#mongo', 0.28);
+  const js = new Skill(150, 150, '#js', 0.46);
+  const python = new Skill(150, 150, '#php', 0.55);
+  const node = new Skill(150, 150, '#node', 0.29);
+  const mysql = new Skill(150, 150, '#mysql', 0.5);
+  const git = new Skill(150, 150, '#git', 0.45);
+  const webpack = new Skill(150, 150, '#bower', 0.1);
+  const gulp = new Skill(150, 150, '#gulp', 0.5);
+  const mongo = new Skill(150, 150, '#mongo', 0.23);
 
 
   document.addEventListener("DOMContentLoaded", function(event) {
@@ -72,28 +72,29 @@ if (window.location.href.endsWith('about.html')) {
     || document.documentElement.clientHeight
     || document.body.clientHeight;
 
-    console.log('windowHeight:'+height);
 
-    window.onscroll = function() {
-      console.log(window.pageYOffset);
+    function animateSkills() {
       if (!animationDone && (window.pageYOffset > (height / 2))) {
           html.draw();
           css.draw();
           js.draw();
           setTimeout(()=>{
-            php.draw();
+            python.draw();
             node.draw();
             mysql.draw();  
             mongo.draw();            
           }, 500);
           setTimeout(()=>{
             git.draw();
-            bower.draw();
+            webpack.draw();
             gulp.draw();
           }, 1000);
           animationDone = true;
         }
     }
+
+  window.addEventListener('scroll', animateSkills);
+
   });
 
 
