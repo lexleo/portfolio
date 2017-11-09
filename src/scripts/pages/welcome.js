@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         if (e) {
             e.preventDefault();
         }
-        flipContainer.classList.toggle("flip");        
-        loginBtn.classList.toggle('hide');
+        if (flipContainer) flipContainer.classList.toggle("flip");        
+        if(loginBtn) loginBtn.classList.toggle('hide');
     }
     
     var comeFrom = document.referrer.slice(-10);
