@@ -95,17 +95,17 @@ if (window.location.href.endsWith('about.html')) {
   || document.documentElement.clientHeight
   || document.body.clientHeight;
 
-  console.log(height);
+  // console.log(height);
   
   function animateMap() {
-    console.log(window.pageYOffset);
-    if (!animatingNow && !mapAnimated && (window.pageYOffset > height*1.45)) {
+    // console.log(window.pageYOffset);
+    if (!animatingNow && !mapAnimated && (window.pageYOffset > height*2)) {
       // console.log('On! ' + window.pageYOffset + ' > ' + height*0.8);
       mapAnimateOn();
       mapAnimated = true;
     }
 
-    if (!animatingNow && mapAnimated && (window.pageYOffset < (height*0.5))) {
+    if (!animatingNow && mapAnimated && (window.pageYOffset < (height*1.3))) {
       // console.log('Off! ' + window.pageYOffset + ' < ' + height*0.8);
       mapAnimateOff();
       mapAnimated = false;

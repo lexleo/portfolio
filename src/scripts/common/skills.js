@@ -74,7 +74,7 @@ if (window.location.href.endsWith('about.html')) {
 
 
     function animateSkills() {
-      if (!animationDone && (window.pageYOffset > (height / 2))) {
+      if (!animationDone && (window.pageYOffset > (height*0.7))) {
           html.draw();
           css.draw();
           js.draw();
@@ -91,6 +91,7 @@ if (window.location.href.endsWith('about.html')) {
           }, 1000);
           animationDone = true;
         }
+
     }
 
   window.addEventListener('scroll', animateSkills);

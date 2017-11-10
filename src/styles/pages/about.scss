@@ -341,4 +341,100 @@
     margin-top: rem(10px);
 }
 
+.courses {
+    @include flex(column);
+    width: 100%;
+    background: $dark-beige;
+    padding: 40px 10px 20px 20px;
+}
 
+.courses__container {
+    display: flex;
+    padding-top: 30px;
+    width: 100%;
+}
+
+.courses__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.courses__item {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 15px;
+    flex: 1 1 400px;
+    max-width: 530px;
+    min-width: 400px;
+}
+
+.certificate__img-wrapper {
+    max-width: 130px;
+    max-height: 200px;    
+}
+
+.certificate__img {
+    width: 100%;
+    height: 100%;  
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .27));   
+    
+    transition: all .3s cubic-bezier(.55,.08,.06,.97);
+    &:hover {
+        transform: translateY(-8px);
+        filter: drop-shadow(0 10px 10px rgba(0, 0, 0, .27)); 
+    }     
+}
+
+.certificate {
+    display: flex;
+}
+
+.certificate__left, .certificate__right {
+    display: flex;
+    flex-direction: column;
+    @include roboto;
+}
+
+.certificate__left {
+    justify-content: center;   
+}
+
+.certificate__right {
+    max-width: 370px;
+    justify-content: center;
+    padding: 15px;    
+}
+
+.course__title {
+    @include roboto(medium);
+    font-size: rem(16px);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.course__school {
+    @include flex();
+    margin-bottom: 10px;
+    position: relative;
+    border-bottom: 4px solid $light-light-grey;
+    padding-bottom: 10px;
+}
+
+.course__date {
+    @include roboto(light);
+    font-size: rem(12px);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.course__techs {
+    text-align: center;
+    @include roboto(light);
+    font-style: italic;
+    font-size: 15px;
+
+}
