@@ -74,7 +74,7 @@ if (window.location.href.endsWith('about.html')) {
 
 
     function animateSkills() {
-      if (!animationDone && (window.pageYOffset > (height*0.7))) {
+      if (!animationDone && (window.pageYOffset > (height*0.55))) {
           html.draw();
           css.draw();
           js.draw();

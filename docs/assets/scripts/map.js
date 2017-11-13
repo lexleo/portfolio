@@ -78,16 +78,14 @@ if (window.location.href.endsWith('about.html')) {
     link.onmouseover = function () {
       var translate = getTranslateXY();
       var newStyle = "transform: translate(" + translate.x + "px, " + (translate.y + shift) + "px);";
-      mapMarker.style = newStyle;
-      mapAnimateOn();      
+      mapMarker.style = newStyle;   
     };
 
     // move back
     link.onmouseleave = function () {
       var translate = getTranslateXY();
       var oldStyle = "transform: translate(" + translate.x + "px, " + (translate.y - shift) + "px);";
-      mapMarker.style = oldStyle;
-      mapAnimateOff();      
+      mapMarker.style = oldStyle;    
     };
 
 
