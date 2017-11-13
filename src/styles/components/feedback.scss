@@ -41,9 +41,14 @@
     resize: vertical;
     max-height: 300px;
     @include roboto();
+    outline: none;
 
     &:placeholder {
         color: rgba($grey, .5);
+    }
+    
+    &:focus {
+        border: 1px solid rgba($green, .7);
     }
 }
 

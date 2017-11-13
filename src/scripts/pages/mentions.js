@@ -6,11 +6,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // var screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width,
         mentions = document.querySelector('.mentions'),
         mentionsContent = document.querySelector('.mentions__content'),
-        mentionsFeedback = document.querySelector('.mentions__feedback');
+        mentionsFeedback = document.querySelector('.mentions__feedback'),
+        feedbackHeader = document.querySelector('.feedback__header> .strokes-title');
 
-      if (iOS) alert('Its iOS!');
-    
-    //   if((screenWidth < 480) && iOS) {
       if(iOS) {
           if (mentions) {
             mentions.style.backgroundAttachment = "scroll";
@@ -20,7 +18,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
           }
           if (mentionsFeedback) {
             mentionsFeedback.style.background = "none";
-          }        
+          }
+          if (feedbackHeader) feedbackHeader.style.color = "white";
       }
 
 
