@@ -45,19 +45,16 @@
 }
 
 
+.header__img-wrapper {
+    max-width: 147px;
+    max-height: 147px;
+    margin-top: rem(25px);    
+}
+
 .header__img {
-    background: url('../images/photos/me.png');
-    width: rem(147px);
-    height: rem(147px);
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    margin-top: rem(25px);
-    @include tablets {
-        background-position-x: -8px;
-    }    
-    @include phones {
-        background-position-x: -20px;
-    }
-    
 }
 
 .header__title {
