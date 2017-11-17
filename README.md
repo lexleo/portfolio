@@ -1,4 +1,2 @@
-Студент: Алексей Шилякин  
-Наставник: Александр Собакарь  
-Курс: Продвинутый курс по веб-разработке (09.2017)  
-Демо: https://lexleo.github.io/portfolio/
+Site-portfolio
+Based on my LoftSchool «Advanced web-development» course project
