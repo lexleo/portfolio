@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     var mainPos = 1,
         leftPos = 2,
-        rightPos = 3;
+        rightPos = 4;
 
     function moveForward() {
         if(slidesLeft && slidesRight && slidesHor) {
