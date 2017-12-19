@@ -24,8 +24,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
         },
         {
             name: 'Deltaplan.pro',
-            techs: 'HTML, CSS, JS, Python',
+            techs: 'Python, HTML, CSS, JS ',
             link: 'http://deltaplan.pro/'
+        },
+        {
+            name: 'Deep Dive VR',
+            techs: 'HTML, CSS, JS',
+            link: 'http://deepdive.pro/'
         },
     ]
 
