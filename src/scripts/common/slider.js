@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         {
             name: 'Deep Dive VR',
             techs: 'HTML, CSS, JS',
-            link: 'http://deepdive.pro/'
+            link: 'https://lexleo.github.io/deep-dive/'
         },
     ]
 
