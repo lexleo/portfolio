@@ -373,7 +373,12 @@
 
 .certificate__img-wrapper {
     max-width: 130px;
-    max-height: 200px;    
+    max-height: 160px;
+}
+
+.certificate__img-wrapper-vertical {
+    max-width: 113px;
+    max-height: auto;
 }
 
 .certificate__img {
